@@ -28,7 +28,144 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+<style>
+/* PARALLAX HEADER */
+.parallax-banner-manali {
+  background: url("assets/img/travel/Manali-Tours.jpg") center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-manali::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {
+   background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+    color: #ff7b47;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+ 
+  background: #ff7b47;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(30,144,255,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1e90ff;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+</style>
 
 </head>
 
@@ -94,18 +231,15 @@
     </div>
   </header>
   <!-- main navbar ends -->
-
- 
-    
-    <!-- ==================== HIMACHAL TOUR PREMIUM SECTION START ===================== -->
+<!-- ==================== MANALI TOUR PREMIUM SECTION START ===================== -->
 <section class="premium-tour-section">
 
   <!-- PARALLAX HEADER -->
-  <div class="parallax-banner d-flex align-items-center justify-content-center">
+  <div class="parallax-banner-manali d-flex align-items-center justify-content-center">
     <div class="text-center text-white banner-content fade-in-up">
-      <h1 class="display-4 fw-bold gradient-text">Exciting Himachal Pradesh</h1>
-      <p class="fs-5 opacity-75">4 Nights / 5 Days • Kasol • Manali • Kullu • Manikaran • Atal Tunnel</p>
-      <div class="price-badge">Starting at ₹11,999 / person</div>
+      <h1 class="display-4 fw-bold gradient-text">Manali Adventure & Nature Tour</h1>
+      <p class="fs-5 opacity-75">6 Nights / 7 Days • Manali • Solang Valley • Rohtang Pass • Hadimba Temple • Naggar</p>
+      <div class="price-badge">Starting at ₹35,000 / person</div>
     </div>
   </div>
 
@@ -115,75 +249,91 @@
     <div class="glass-card fade-in-up mb-5">
       <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
       <p>
-        Enjoy snow views, riverside villages, peaceful valleys and adventure fun on this 
-        4 nights / 5 days Himachal group tour from Chandigarh, covering Manali, Kasol, 
-        Kullu, Manikaran and Atal Tunnel with 3-star stays, meals, AC transport and tour manager.
+        Explore the scenic hill station of Manali with snow-capped mountains, lush valleys, and exciting adventures.  
+        This 6 Nights / 7 Days tour includes Solang Valley, Rohtang Pass, Hadimba Temple, Naggar Castle, and local sightseeing.  
+        Enjoy deluxe hotels, AC transport, guided tours, and breathtaking landscapes.
       </p>
 
       <div class="row mt-4">
         <div class="col-md-4">
           <div class="overview-box">
             <i class="bi bi-calendar2-week"></i>
-            <p>5 Days / 4 Nights</p>
+            <p>7 Days / 6 Nights</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="overview-box">
             <i class="bi bi-cash-coin"></i>
-            <p>From ₹11,999 Per Person</p>
+            <p>From ₹35,000 Per Person</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="overview-box">
-            <i class="bi bi-cloud-sun"></i>
-            <p>Best Season: Apr–Jun & Dec–Feb</p>
+            <i class="bi bi-clock-history"></i>
+            <p>Departures: Jan–Mar & Oct–Dec</p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- ITINERARY -->
-    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (4N / 5D)</h3>
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (6N / 7D)</h3>
 
     <div class="timeline">
 
       <div class="timeline-item fade-in-left">
         <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
         <div class="content">
-          <h5>Day 1 – Chandigarh → Manali</h5>
-          <p>Drive through Bilaspur, Sundernagar & Kullu valley. Evening check-in at Manali hotel.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-in-right">
-        <div class="timeline-icon"><i class="bi bi-building"></i></div>
-        <div class="content">
-          <h5>Day 2 – Manali Local Sightseeing</h5>
-          <p>Visit Hadimba Temple, Vashisht hot springs, Tibetan Monastery & Mall Road.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item fade-in-left">
-        <div class="timeline-icon"><i class="bi bi-snow2"></i></div>
-        <div class="content">
-          <h5>Day 3 – Atal Tunnel & Solang Valley</h5>
-          <p>Snow adventure day! Visit Solang Valley, Atal Tunnel & Sissu viewpoint.</p>
+          <h5>Day 1 – Arrival in Manali</h5>
+          <p>Airport/Bus pickup. Check-in at hotel. Evening leisure and local market visit.</p>
         </div>
       </div>
 
       <div class="timeline-item fade-in-right">
         <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
         <div class="content">
-          <h5>Day 4 – Manali → Kullu → Kasol → Manikaran</h5>
-          <p>Visit rafting point, Parvati valley, Kasol cafes & Manikaran hot springs.</p>
+          <h5>Day 2 – Manali Sightseeing</h5>
+          <p>Visit Hadimba Temple, Manu Temple, Vashisht Hot Springs, and local bazaar.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-snow"></i></div>
+        <div class="content">
+          <h5>Day 3 – Solang Valley & Rohtang Pass</h5>
+          <p>Excursion to Solang Valley for adventure sports and Rohtang Pass sightseeing.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 4 – Naggar Sightseeing</h5>
+          <p>Visit Naggar Castle, Nicholas Roerich Art Gallery, and surrounding scenic spots.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-water"></i></div>
+        <div class="content">
+          <h5>Day 5 – Local Adventure & Leisure</h5>
+          <p>Optional activities like paragliding, river rafting, or local trekking.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-shop"></i></div>
+        <div class="content">
+          <h5>Day 6 – Manali Local Exploration</h5>
+          <p>Explore Old Manali, Tibetan Monastery, and enjoy Himachali cuisine.</p>
         </div>
       </div>
 
       <div class="timeline-item fade-in-left">
         <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
         <div class="content">
-          <h5>Day 5 – Kasol / Kullu → Chandigarh</h5>
-          <p>Return journey with scenic views of the Beas river & hill towns.</p>
+          <h5>Day 7 – Departure</h5>
+          <p>Drop at Airport/Bus station with beautiful memories of Manali.</p>
         </div>
       </div>
 
@@ -198,13 +348,12 @@
         <div class="glass-card fade-in-left">
           <h4 class="fw-bold">✔ Inclusions</h4>
           <ul class="custom-list">
-            <li>3-star hotels (4 nights)</li>
-            <li>Breakfast & Dinner (MAP plan)</li>
-            <li>AC coach / tempo traveller transport</li>
-            <li>Atal Tunnel + Solang Valley</li>
-            <li>Kullu, Kasol & Manikaran visit</li>
-            <li>Entry fees included</li>
-            <li>Tour manager assistance</li>
+            <li>3/4 star deluxe hotels</li>
+            <li>Breakfast & Dinner</li>
+            <li>Private AC vehicle</li>
+            <li>Guided sightseeing & permits</li>
+            <li>Pickup & drop from airport/bus station</li>
+            <li>Adventure activities (optional)</li>
           </ul>
         </div>
       </div>
@@ -213,12 +362,11 @@
         <div class="glass-card fade-in-right">
           <h4 class="fw-bold">❌ Exclusions</h4>
           <ul class="custom-list">
-            <li>Flight / Train tickets</li>
-            <li>Lunches, snacks, personal expenses</li>
-            <li>Adventure sports fees</li>
-            <li>Pony / Jeep for restricted points</li>
-            <li>Unexpected weather/road issues</li>
-            <li>Extra sightseeing</li>
+            <li>Airfare / Bus tickets</li>
+            <li>Lunch & personal expenses</li>
+            <li>Optional activities not mentioned</li>
+            <li>Tips & gratuities</li>
+            <li>Anything not listed in inclusions</li>
           </ul>
         </div>
       </div>
@@ -228,7 +376,8 @@
   </div>
 
 </section>
-<!-- ===================== HIMACHAL TOUR PREMIUM SECTION END ===================== -->
+<!-- ==================== MANALI TOUR PREMIUM SECTION END ===================== -->
+
 
   <!-- ###  footer Start  ###-->
 

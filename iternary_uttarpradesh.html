@@ -27,13 +27,143 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://www.ewebdigital.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://www.ewebdigital.com/license/
-  ======================================================== -->
+  <style>
+        /* PARALLAX HEADER */
+.parallax-banner-uttarpradesh {
+  background: url("assets/img/travel/up\ tour-1.jpg") center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-uttarpradesh::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-text {  background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff7b47;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(243,156,18,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+  </style>
 </head>
 
 <body class="goa-page">
@@ -101,585 +231,161 @@
 
   <main class="main">
 
+    <!-- ==================== UTTAR PRADESH TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Iternary for Uttar Pradesh</h1>
-        <p>Uttar Pradesh, the heart of India, is a land where history, culture, and spirituality blend seamlessly. Home to the iconic Taj Mahal in Agra—one of the Seven Wonders of the World—UP attracts visitors from across the globe. The state is deeply spiritual, with sacred cities like Varanasi, Ayodhya, and Mathura–Vrindavan offering timeless experiences of devotion, rituals, and ancient traditions.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Uttar Pradesh</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Uttar Pradesh</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-uttarpradesh d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Uttar Pradesh Heritage & Spiritual Tour</h1>
+      <p class="fs-5 opacity-75">7 Nights / 8 Days • Agra • Lucknow • Varanasi • Mathura • Jhansi</p>
+      <div class="price-badge">Starting at ₹38,000 / person</div>
     </div>
+  </div>
 
-    <!-- Header End -->
+  <div class="container py-5">
 
-<!-- itenary start -->
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Discover the rich heritage, culture, and spirituality of Uttar Pradesh.  
+        This 7 Nights / 8 Days tour covers Agra, Lucknow, Varanasi, Mathura, and Jhansi.  
+        Experience the Taj Mahal, ghats of Varanasi, spiritual temples, local cuisine, and 
+        historical forts with deluxe hotels, guided sightseeing, and comfortable transport.
+      </p>
 
-<div class="container p-5 m-5">
-
-  <div class="st-program-list">
-
-    <!-- Day 1 -->
-    <div class="accordion faq st-program style1" id="accordion_day-1-up">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-up">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-up" aria-expanded="false"
-            aria-controls="day-1-up">
-            Day 1 – Arrival in Varanasi
-          </button>
-        </h2>
-        <div id="st-day-1-up" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-up"
-          data-bs-parent="#accordion_day-1-up">
-
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/up tour-1.jpg" alt="Day 1 Varanasi" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-                <ul>
-                  <li>Arrive in Varanasi and check into the hotel.</li>
-                </ul>
-
-                <ul>
-                  <li>Evening visit to Dashashwamedh Ghat to witness the grand Ganga Aarti.</li>
-                  <li>Stroll through the spiritual bylanes of the old city.</li>
-                </ul>
-              </div>
-            </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>8 Days / 7 Nights</p>
           </div>
-
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹38,000 Per Person</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Departures: Jan–Mar & Oct–Dec</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Day 2 -->
-    <div class="accordion faq st-program style1" id="accordion_day-2-up">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-up">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-up" aria-expanded="false"
-            aria-controls="day-2-up">
-            Day 2 – Varanasi Sightseeing
-          </button>
-        </h2>
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (7N / 8D)</h3>
 
-        <div id="st-day-2-up" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-2-up"
-          data-bs-parent="#accordion_day-2-up">
+    <div class="timeline">
 
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/up tour-2.jpg" alt="Day 2 Varanasi" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Early morning boat ride on the Ganga to see sunrise and ghats.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Kashi Vishwanath Temple, Sarnath Stupa, and local markets.</li>
-                  <li>Evening leisure time exploring cafés and riverside walks.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Arrival in Lucknow</h5>
+          <p>Airport/railway pickup. Evening visit to Bara Imambara and local market.</p>
         </div>
       </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 2 – Lucknow Sightseeing</h5>
+          <p>Explore Chota Imambara, Rumi Darwaza, and taste famous Awadhi cuisine.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-bank"></i></div>
+        <div class="content">
+          <h5>Day 3 – Lucknow → Agra</h5>
+          <p>Drive to Agra. Visit Taj Mahal and Agra Fort. Evening leisure or shopping.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 4 – Agra → Mathura & Vrindavan</h5>
+          <p>Visit Krishna Janmabhoomi Temple, Banke Bihari Temple, and local ghats.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
+        <div class="content">
+          <h5>Day 5 – Mathura → Varanasi</h5>
+          <p>Fly/Drive to Varanasi. Evening Ganga Aarti at Dashashwamedh Ghat.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-water"></i></div>
+        <div class="content">
+          <h5>Day 6 – Varanasi Sightseeing</h5>
+          <p>Boat ride at sunrise, Kashi Vishwanath Temple, Sarnath tour.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-shop"></i></div>
+        <div class="content">
+          <h5>Day 7 – Varanasi → Jhansi</h5>
+          <p>Drive to Jhansi. Visit Jhansi Fort & Rani Mahal. Evening leisure.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 8 – Departure</h5>
+          <p>Drop at airport/railway station with wonderful memories of Uttar Pradesh.</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Day 3 -->
-    <div class="accordion faq st-program style1" id="accordion_day-3-up">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-up">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-up" aria-expanded="false"
-            aria-controls="day-3-up">
-            Day 3 – Varanasi to Ayodhya
-          </button>
-        </h2>
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
 
-        <div id="st-day-3-up" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-3-up"
-          data-bs-parent="#accordion_day-3-up">
+    <div class="row g-4">
 
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/up tour-3.jpg" alt="Day 3 Ayodhya" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Ayodhya – the birthplace of Lord Rama.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Ram Janmabhoomi Temple and Hanuman Garhi.</li>
-                  <li>Evening Aarti at Saryu River.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>3/4 star deluxe hotels</li>
+            <li>Breakfast & Dinner</li>
+            <li>Private AC vehicle</li>
+            <li>Tour Manager support</li>
+            <li>Guided sightseeing & permits</li>
+            <li>Pickup & drop from airport/railway station</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Day 4 -->
-    <div class="accordion faq st-program style1" id="accordion_day-4-up">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-up">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-up" aria-expanded="false"
-            aria-controls="day-4-up">
-            Day 4 – Ayodhya to Lucknow
-          </button>
-        </h2>
-
-        <div id="st-day-4-up" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-4-up"
-          data-bs-parent="#accordion_day-4-up">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/up tour-4.jpg" alt="Day 4 Lucknow" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Lucknow – City of Nawabs.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Bara Imambara, Chota Imambara, and Rumi Darwaza.</li>
-                  <li>Evening shopping for chikankari and enjoy famous Lucknowi cuisine.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Airfare / Train tickets</li>
+            <li>Lunches not mentioned</li>
+            <li>Personal expenses & tips</li>
+            <li>Optional activities</li>
+            <li>Anything not mentioned in inclusions</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Day 5 -->
-    <div class="accordion faq st-program style1" id="accordion_day-5-up">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-up">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-up" aria-expanded="false"
-            aria-controls="day-5-up">
-            Day 5 – Lucknow to Agra
-          </button>
-        </h2>
-
-        <div id="st-day-5-up" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-5-up"
-          data-bs-parent="#accordion_day-5-up">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/up tour-5.jpg" alt="Day 5 Agra" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Agra – city of the iconic Taj Mahal.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Taj Mahal, Agra Fort & Mehtab Bagh.</li>
-                  <li>Evening free to explore marble markets.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="accordion faq st-program style1" id="accordion_day-6-up">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-up">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-up" aria-expanded="false"
-            aria-controls="day-6-up">
-            Day 6 – Departure from Uttar Pradesh
-          </button>
-        </h2>
-
-        <div id="st-day-6-up" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-6-up"
-          data-bs-parent="#accordion_day-6-up">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/up tour-6.jpg" alt="Day 6 Departure" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>After breakfast, check out from the hotel.</li>
-                </ul>
-
-                <ul>
-                  <li>Proceed for onward journey with beautiful Uttar Pradesh memories.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
     </div>
 
   </div>
 
-</div>
-
-<!-- itenary end -->
-<!-- itenary start -->
-
-<div class="container p-5 m-5">
-
-  <div class="st-program-list">
-
-    <!-- Day 1 -->
-    <div class="accordion faq st-program style1" id="accordion_day-1-uk">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-uk">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-uk" aria-expanded="false"
-            aria-controls="day-1-uk">
-            Day 1 – Arrival in Dehradun / Haridwar
-          </button>
-        </h2>
-        <div id="st-day-1-uk" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-uk"
-          data-bs-parent="#accordion_day-1-uk">
-
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img src="img/uk1.jpg" alt="Day 1 Uttarakhand" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-                <ul>
-                  <li>Arrive in Dehradun/Haridwar and check into the hotel.</li>
-                  <li>Evening visit Har Ki Pauri for the holy Ganga Aarti.</li>
-                  <li>Explore local markets and the spiritual riverfront.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 2 -->
-    <div class="accordion faq st-program style1" id="accordion_day-2-uk">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-uk">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-uk" aria-expanded="false"
-            aria-controls="day-2-uk">
-            Day 2 – Haridwar to Rishikesh
-          </button>
-        </h2>
-
-        <div id="st-day-2-uk" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-2-uk"
-          data-bs-parent="#accordion_day-2-uk">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="img/uk2.jpg" alt="Day 2 Rishikesh" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Rishikesh – the Yoga Capital of the World.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Laxman Jhula, Ram Jhula & Beatles Ashram.</li>
-                  <li>Enjoy Ganga Aarti at Triveni Ghat in the evening.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 3 -->
-    <div class="accordion faq st-program style1" id="accordion_day-3-uk">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-uk">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-uk" aria-expanded="false"
-            aria-controls="day-3-uk">
-            Day 3 – Rishikesh to Mussoorie
-          </button>
-        </h2>
-
-        <div id="st-day-3-uk" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-3-uk"
-          data-bs-parent="#accordion_day-3-uk">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="img/uk3.jpg" alt="Day 3 Mussoorie" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Mussoorie – the Queen of Hills.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Kempty Falls, Gun Hill Point, and Mall Road.</li>
-                  <li>Enjoy scenic views of the Doon Valley.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 4 -->
-    <div class="accordion faq st-program style1" id="accordion_day-4-uk">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-uk">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-uk" aria-expanded="false"
-            aria-controls="day-4-uk">
-            Day 4 – Mussoorie to Nainital
-          </button>
-        </h2>
-
-        <div id="st-day-4-uk" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-4-uk"
-          data-bs-parent="#accordion_day-4-uk">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="img/uk4.jpg" alt="Day 4 Nainital" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to the beautiful lake town of Nainital.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Naini Lake, Naina Devi Temple & Mall Road.</li>
-                  <li>Enjoy boating and evening leisure time.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 5 -->
-    <div class="accordion faq st-program style1" id="accordion_day-5-uk">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-uk">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-uk" aria-expanded="false"
-            aria-controls="day-5-uk">
-            Day 5 – Nainital Sightseeing
-          </button>
-        </h2>
-
-        <div id="st-day-5-uk" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-5-uk"
-          data-bs-parent="#accordion_day-5-uk">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="img/uk5.jpg" alt="Day 5 Nainital" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Explore Snow View Point, Eco Cave Gardens & Bhimtal.</li>
-                </ul>
-
-                <ul>
-                  <li>Evening free for shopping & relaxing by the lakeside.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="accordion faq st-program style1" id="accordion_day-6-uk">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-uk">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-uk" aria-expanded="false"
-            aria-controls="day-6-uk">
-            Day 6 – Departure from Uttarakhand
-          </button>
-        </h2>
-
-        <div id="st-day-6-uk" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-6-uk"
-          data-bs-parent="#accordion_day-6-uk">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="img/uk6.jpg" alt="Day 6 Departure" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Check out from the hotel after breakfast.</li>
-                  <li>Proceed for onward journey with beautiful Uttarakhand memories.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-<!-- itenary end -->
-
-
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/uttarpradesh_1.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3">Uttar Pradesh</h5>
-                    <h1 class="display-5 mb-4">
-                        “Uttar Pradesh: Land of Culture & Timeless Heritage.”   </h1>
-                    <p class="mb-4">
-                     Uttar Pradesh, the heart of India, is a land where history, culture, and spirituality blend seamlessly. Home to the iconic Taj Mahal in Agra—one of the Seven Wonders of the World—UP attracts visitors from across the globe. The state is deeply spiritual, with sacred cities like Varanasi, Ayodhya, and Mathura–Vrindavan offering timeless experiences of devotion, rituals, and ancient traditions. From the serene ghats of the Ganga to majestic forts, vibrant festivals, rich cuisine, and bustling bazaars, Uttar Pradesh showcases the true essence of India.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                       “UP – A journey through faith, history, and beauty.”
-                    </h1>
-                    <p class="mb-4">
-                       Uttar Pradesh, the heartland of India, is a land where culture, spirituality, and history blend beautifully. Home to the sacred cities of Varanasi and Ayodhya, the architectural masterpiece Taj Mahal in Agra, and the royal heritage of Lucknow, Uttar Pradesh reflects India’s soul. With holy rivers like the Ganga and Yamuna flowing through it, ancient temples, Mughal monuments, vibrant bazaars, and rich culinary traditions, the state offers a diverse travel experience. From spiritual journeys and historical exploration to cultural festivals and delicious Awadhi cuisine, Uttar Pradesh welcomes every traveler with warmth and timeless charm.                </div>
-                   <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/uttarpradesh_2.avif" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-    
+</section>
+<!-- ==================== UTTAR PRADESH TOUR PREMIUM SECTION END ===================== -->
 
  <!-- ###  footer Start  ###-->
   

@@ -27,14 +27,145 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<style>
+/* PARALLAX HEADER */
+.parallax-banner-kedarnath {
+  background: url("assets/img/travel/kedarnath\ tour-3.jpg") center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-kedarnath::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://www.ewebdigital.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://www.ewebdigital.com/license/
-  ======================================================== -->
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+    color: #ff7b47;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+ 
+  background: #ff7b47;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(255,221,138,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ffdd8a;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+</style>
 </head>
 
 <body class="goa-page">
@@ -101,323 +232,148 @@
   <!-- main navbar ends -->
   <main class="main">
 
+<!-- ==================== KEDARNATH TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Itenary for the Kedarnath</h1>
-        <p>Kedarnath is truly a place where faith meets the mountains. Nestled in the heart of the Himalayas, this sacred destination draws countless devotees and travelers who come to experience its spiritual aura and breathtaking natural beauty.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Kedarnath</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-<!-- heading start -->
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Kashmir</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
-    </div>
-
-    <!-- Header End -->
-    <!-- heading end -->
-
-
-    <!-- itenary start -->
-
-  <div class="container p-5 m-5">
-
-  <div class="st-program-list">
-    <div class="accordion faq st-program style1" id="accordion_day-1-chandigarh-to-manali-voyage">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-chandigarh-to-manali-voyage">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-chandigarh-to-manali-voyage" aria-expanded="false"
-            aria-controls="day-1-chandigarh-to-manali-voyage">
-           Day 1: Arrival at Haridwar / Rishikesh</button>
-        </h2>
-        <div id="st-day-1-chandigarh-to-manali-voyage" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-chandigarh-to-manali-voyage"
-          data-bs-parent="#accordion_day-1-chandigarh-to-manali-voyage" style="">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kedarnath tour-1.jpg"
-                  alt="Day 1 Chandigarh To Manali Voyage" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">. Start your spiritual journey by arriving at Haridwar or Rishikesh, the gateway to the Himalayas. Check into your hotel and relax after your travel. In the evening</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">witness the mesmerizing Ganga Aarti on the ghats and explore local markets for souvenirs and devotional items. Overnight stay at Haridwar/Rishikesh.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Check into your hotel and relax after your travel. In the evening, witness the mesmerizing Ganga Aarti on the ghats and explore local markets for souvenirs and devotional items.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-2-manali-to-kaza-via-atal-tunnel">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-manali-to-kaza-via-atal-tunnel">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-manali-to-kaza-via-atal-tunnel" aria-expanded="true"
-            aria-controls="day-2-manali-to-kaza-via-atal-tunnel">
-            Day 2: Drive to Gaurikund – Trek to Kedarnath</button>
-        </h2>
-        <div id="st-day-2-manali-to-kaza-via-atal-tunnel" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-2-manali-to-kaza-via-atal-tunnel"
-          data-bs-parent="#accordion_day-2-manali-to-kaza-via-atal-tunnel">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kedarnath tour-2.jpg"
-                  alt="Day 2 Manali To Kaza (via Atal Tunnel)" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">After an early breakfast, drive to Sonprayag and then proceed to Gaurikund, the base of Kedarnath.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">From here, embark on the 14 km trek to Kedarnath through lush forests, streams, and rugged mountain terrain.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">TDevotees can also hire ponies, palanquins, or opt for a helicopter ride for part of the journey. Upon arrival, check into guesthouses or dharamshalas and visit the Kedarnath Temple for prayers. Overnight stay near the temple.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Upon arrival, check into guesthouses or dharamshalas and visit the Kedarnath Temple for prayers. Overnight stay near the temple.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-3-exploring-kaza">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-exploring-kaza">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-exploring-kaza" aria-expanded="true" aria-controls="day-3-exploring-kaza">
-           Day 3: Kedarnath – Explore & Spiritual Activities </button>
-        </h2>
-        <div id="st-day-3-exploring-kaza" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-3-exploring-kaza" data-bs-parent="#accordion_day-3-exploring-kaza">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kedarnath tour-3.jpg"
-                  alt="Day 3 Exploring Kaza" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Wake up early to witness the breathtaking sunrise over the snow-capped peaks. Spend the day exploring Kedarnath Temple and its surroundings.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">meditate, or take short treks nearby for panoramic views. Feel the divine energy of the Himalayas and immerse yourself in the serenity of this sacred place. Overnight stay near the temple.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-4-kaza-exploration-continues">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-kaza-exploration-continues">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-kaza-exploration-continues" aria-expanded="true"
-            aria-controls="day-4-kaza-exploration-continues">
-           Day 4: Trek Back to Gaurikund – Drive to Chopta </button>
-        </h2>
-        <div id="st-day-4-kaza-exploration-continues" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-4-kaza-exploration-continues"
-          data-bs-parent="#accordion_day-4-kaza-exploration-continues">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kedarnath tour-4.jpg"
-                  alt="Day 4 Kaza Exploration Continues" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Begin the morning trek back to Gaurikund and continue your drive towards Chopta, also known as the “Mini Switzerland of India.”</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Check into a guesthouse or campsite in Chopta and enjoy the pristine beauty of meadows, pine forests, and snow-covered peaks. Evening at leisure with photography and nature walks.
-                    </li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">“Mini Switzerland of India.” Check into a guesthouse or campsite in Chopta and enjoy the pristine beauty of meadows</li>
-                    
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-cherishing-the-lake-and-driving-to-manali">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-cherishing-the-lake-and-driving-to-manali" aria-expanded="true"
-            aria-controls="day-5-cherishing-the-lake-and-driving-to-manali">
-          Day 5: Chopta – Tungnath & Chandrashila Trek </button>
-        </h2>
-        <div id="st-day-5-cherishing-the-lake-and-driving-to-manali" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-5-cherishing-the-lake-and-driving-to-manali"
-          data-bs-parent="#accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kedarnath tour-5.jpg"
-                  alt="Day 5 Cherishing the Lake And Driving To Manali" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Embark on the scenic trek to Tungnath Temple, the highest Shiva temple in the world, located at 3,680 meters.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Continue to Chandrashila Peak for a panoramic 360° view of the Himalayan ranges including Nanda Devi, Trishul, and Kedarnath. Descend back to Chopta for overnight stay, enjoying the tranquil Himalayan environment
-                    </li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-6-bidding-adieu-to-the-mountains">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-bidding-adieu-to-the-mountains">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-bidding-adieu-to-the-mountains" aria-expanded="true"
-            aria-controls="day-6-bidding-adieu-to-the-mountains">
-           Day 6: Return Journey to Haridwar / Rishikesh </button>
-        </h2>
-        <div id="st-day-6-bidding-adieu-to-the-mountains" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-6-bidding-adieu-to-the-mountains"
-          data-bs-parent="#accordion_day-6-bidding-adieu-to-the-mountains">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kedarnath tour-6.jpg"
-                  alt="Day 6 Bidding Adieu To The Mountains" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">After breakfast, begin your return journey to Haridwar or Rishikesh. Depending on your departure schedule, you can explore the local markets or relax by the banks of the Ganga. Conclude your 6-day spiritual and scenic adventure in the Himalayas with memories of Kedarnath, Chopta, and the majestic peaks that will stay with you forever.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-kedarnath d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Divine Kedarnath Yatra</h1>
+      <p class="fs-5 opacity-75">5 Nights / 6 Days • Kedarnath • Guptkashi • Sonprayag • Rudraprayag</p>
+      <div class="price-badge">Starting at ₹28,000 / person</div>
     </div>
   </div>
+
+  <div class="container py-5">
+
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Embark on a sacred journey to Kedarnath—one of India’s most revered Jyotirlingas,
+        surrounded by snow-covered Himalayan peaks, serene valleys, and divine energy.
+        This 5 Nights / 6 Days package includes stays, meals, transfers, permits,
+        and guided pilgrimage assistance. A perfect blend of devotion, adventure,
+        and Himalayan beauty.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>6 Days / 5 Nights</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹28,000 Per Person</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Yatra Season: April – November</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (5N / 6D)</h3>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Haridwar / Rishikesh Arrival → Guptkashi</h5>
+          <p>Drive through Devprayag & Rudraprayag. Evening stay in Guptkashi.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-signpost"></i></div>
+        <div class="content">
+          <h5>Day 2 – Guptkashi → Sonprayag → Kedarnath Base</h5>
+          <p>Transfer to Sonprayag. Begin trek / pony / helicopter to Kedarnath base.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-bank2"></i></div>
+        <div class="content">
+          <h5>Day 3 – Kedarnath Darshan</h5>
+          <p>Early morning temple visit. Explore Himalayan peaks & spiritual sites.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-arrow-down-circle"></i></div>
+        <div class="content">
+          <h5>Day 4 – Return Trek → Guptkashi</h5>
+          <p>Descend back to Sonprayag and transfer to Guptkashi hotel.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
+        <div class="content">
+          <h5>Day 5 – Guptkashi → Rudraprayag → Rishikesh</h5>
+          <p>Visit confluence points, temples & scenic valleys.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 6 – Departure</h5>
+          <p>Drop at Haridwar/Rishikesh with divine blessings and memories.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>Hotel stays</li>
+            <li>Breakfast & Dinner</li>
+            <li>Private vehicle transfers</li>
+            <li>Yatra registration assistance</li>
+            <li>Pickup & drop</li>
+            <li>Parking & toll taxes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Helicopter tickets</li>
+            <li>Pony / Palki charges</li>
+            <li>Lunch & personal expenses</li>
+            <li>Extra sightseeing</li>
+            <li>Anything not mentioned in inclusions</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-<!-- itenary end -->
 
-    <!-- About Start -->
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="./assets/Locations/national-tours/national-tours/kedarnath.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3"> Kedarnath</h5>
-                    <h1 class="display-5 mb-4">
-                       “Where faith meets the mountains.”
-                    </h1>
-                    <p class="mb-4">
-Kedarnath is truly a place where faith meets the mountains. Nestled in the heart of the Himalayas, this sacred destination draws countless devotees and travelers who come to experience its spiritual aura and breathtaking natural beauty. The journey to Kedarnath is challenging, winding through rugged mountain paths and pristine valleys.                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                       “Nature’s poetry in every corner.”
-                    </h1>
-                    <p class="mb-4">
-                               yet every step is filled with devotion, reverence, and anticipation. Standing before the ancient temple, surrounded by snow-capped peaks and the serene silence of the mountains, one cannot help but feel a deep connection to the divine. Here, the strength of faith rises as high as the towering Himalayan peaks, and every prayer feels amplified by the majestic landscape.                </div>
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="./assets/Locations/national-tours/national-tours/kedarnath-temple1.webp" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-    
-
+</section>
+<!-- ==================== KEDARNATH TOUR PREMIUM SECTION END ===================== -->
 
     <!-- ###  footer Start  ###-->
-
-
-
   <footer id="footer" class="footer position-relative dark-background">
 
     <div class="container footer-top">

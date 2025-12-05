@@ -26,14 +26,143 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<style>
+ /* PARALLAX HEADER */
+.parallax-banner-uttarakhand {
+  background: url(assets/img/travel/uttarakhand\ tour-1.jpg) center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-uttarakhand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {
+    background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://www.ewebdigital.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://www.ewebdigital.com/license/
-  ======================================================== -->
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+ color: #ff7b47;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff7b47;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(46,204,113,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+</style>
 </head>
 
 <body class="goa-page">
@@ -100,336 +229,161 @@
 
   <main class="main">
 
+<!-- ==================== UTTARAKHAND TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Iternary for Uttarkhand</h1>
-        <p>Uttarakhand, known as the “Devbhumi – Land of the Gods,” is a beautiful northern Indian state blessed with majestic mountains, sacred rivers, lush valleys, and ancient temples. Nestled in the Himalayas, Uttarakhand offers a perfect blend of spirituality, nature, and adventure, making it one of India’s most beloved travel destinations.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Uttarkhand</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Uttarkhand</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-uttarakhand d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Uttarakhand Himalayan Escape</h1>
+      <p class="fs-5 opacity-75">7 Nights / 8 Days • Haridwar • Rishikesh • Mussoorie • Nainital • Jim Corbett</p>
+      <div class="price-badge">Starting at ₹42,000 / person</div>
     </div>
+  </div>
 
-    <!-- Header End -->
+  <div class="container py-5">
 
-<!-- itenary start -->
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Explore the serene valleys, sacred rivers, and majestic mountains of Uttarakhand.  
+        This 7 Nights / 8 Days package covers Haridwar, Rishikesh, Mussoorie, Nainital, and 
+        Jim Corbett National Park. Enjoy deluxe hotels, river rafting, sightseeing, trekking, 
+        and a rejuvenating Himalayan experience for families, friends, and solo travelers.
+      </p>
 
-<div class="container p-5 m-5">
-
-  <div class="st-program-list">
-
-    <!-- Day 1 -->
-    <div class="accordion faq st-program style1" id="accordion_day-1-uttarakhand">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-uttarakhand">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-uttarakhand" aria-expanded="false"
-            aria-controls="day-1-uttarakhand">
-            Day 1 – Arrival in Haridwar / Rishikesh
-          </button>
-        </h2>
-        <div id="st-day-1-uttarakhand" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-uttarakhand"
-          data-bs-parent="#accordion_day-1-uttarakhand">
-
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/uttarakhand tour-1.jpg" alt="Day 1 Haridwar" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-                <ul>
-                  <li>Arrive at Haridwar / Rishikesh and check into the hotel.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Har Ki Pauri Ghat and witness the famous Ganga Aarti.</li>
-                  <li>Explore local temples and vibrant markets along the Ganga river.</li>
-                </ul>
-              </div>
-            </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>8 Days / 7 Nights</p>
           </div>
-
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹42,000 Per Person</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Departures: Mar–Jun & Sep–Nov</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Day 2 -->
-    <div class="accordion faq st-program style1" id="accordion_day-2-uttarakhand">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-uttarakhand">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-uttarakhand" aria-expanded="false"
-            aria-controls="day-2-uttarakhand">
-            Day 2 – Rishikesh Sightseeing & Adventure
-          </button>
-        </h2>
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (7N / 8D)</h3>
 
-        <div id="st-day-2-uttarakhand" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-2-uttarakhand"
-          data-bs-parent="#accordion_day-2-uttarakhand">
+    <div class="timeline">
 
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/uttarakhand tour-2.jpg" alt="Day 2 Rishikesh" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Visit Laxman Jhula, Ram Jhula, and Triveni Ghat.</li>
-                </ul>
-
-                <ul>
-                  <li>Experience river rafting, cliff jumping, and local café hopping.</li>
-                  <li>Enjoy evening leisure time near the Ganga riverside.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Arrival in Haridwar</h5>
+          <p>Airport/railway pickup. Evening Ganga Aarti at Har Ki Pauri.</p>
         </div>
       </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-water"></i></div>
+        <div class="content">
+          <h5>Day 2 – Rishikesh Adventure</h5>
+          <p>River rafting in Ganga, visit Laxman Jhula & Ram Jhula. Evening campfire & yoga.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-mountain"></i></div>
+        <div class="content">
+          <h5>Day 3 – Rishikesh → Mussoorie</h5>
+          <p>Drive to Mussoorie. Visit Kempty Falls, Mall Road, and Gun Hill viewpoint.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
+        <div class="content">
+          <h5>Day 4 – Mussoorie → Nainital</h5>
+          <p>Drive to Nainital. Boating at Naini Lake, visit Snow View Point and Mall Road.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-bank"></i></div>
+        <div class="content">
+          <h5>Day 5 – Nainital Sightseeing</h5>
+          <p>Explore Eco Cave Garden, Naina Devi Temple, and local markets.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-shop"></i></div>
+        <div class="content">
+          <h5>Day 6 – Nainital → Jim Corbett</h5>
+          <p>Drive to Jim Corbett National Park. Evening jungle safari & wildlife spotting.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-sun"></i></div>
+        <div class="content">
+          <h5>Day 7 – Jim Corbett → Haridwar</h5>
+          <p>Return to Haridwar. Leisure evening or optional shopping.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 8 – Departure</h5>
+          <p>Drop at airport/railway station with memorable Uttarakhand experiences.</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Day 3 -->
-    <div class="accordion faq st-program style1" id="accordion_day-3-uttarakhand">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-uttarakhand">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-uttarakhand" aria-expanded="false"
-            aria-controls="day-3-uttarakhand">
-            Day 3 – Rishikesh to Mussoorie
-          </button>
-        </h2>
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
 
-        <div id="st-day-3-uttarakhand" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-3-uttarakhand"
-          data-bs-parent="#accordion_day-3-uttarakhand">
+    <div class="row g-4">
 
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/uttarakhand tour-3.jpg" alt="Day 3 Mussoorie" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Mussoorie – Queen of Hills.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Kempty Falls & enjoy ropeway rides at Gun Hill Point.</li>
-                  <li>Evening walk at Mall Road & enjoy scenic sunset views.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>3/4 star deluxe hotels</li>
+            <li>Breakfast & Dinner</li>
+            <li>Private AC vehicle</li>
+            <li>Tour Manager support</li>
+            <li>Guided sightseeing & permits</li>
+            <li>Pickup & drop from airport/railway station</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Day 4 -->
-    <div class="accordion faq st-program style1" id="accordion_day-4-uttarakhand">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-uttarakhand">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-uttarakhand" aria-expanded="false"
-            aria-controls="day-4-uttarakhand">
-            Day 4 – Mussoorie to Nainital
-          </button>
-        </h2>
-
-        <div id="st-day-4-uttarakhand" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-4-uttarakhand"
-          data-bs-parent="#accordion_day-4-uttarakhand">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/uttarakhand tour-4.jpg" alt="Day 4 Nainital" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Nainital – the lake district of India.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Naini Lake, Naina Devi Temple, and Tibetan Market.</li>
-                  <li>Enjoy boating & evening leisure at Mall Road.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Airfare / Train tickets</li>
+            <li>Lunches not mentioned</li>
+            <li>Personal expenses & tips</li>
+            <li>Optional adventure activities</li>
+            <li>Anything not mentioned in inclusions</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Day 5 -->
-    <div class="accordion faq st-program style1" id="accordion_day-5-uttarakhand">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-uttarakhand">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-uttarakhand" aria-expanded="false"
-            aria-controls="day-5-uttarakhand">
-            Day 5 – Nainital Local Sightseeing
-          </button>
-        </h2>
-
-        <div id="st-day-5-uttarakhand" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-5-uttarakhand"
-          data-bs-parent="#accordion_day-5-uttarakhand">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/uttarakhand tour-5.jpg" alt="Day 5 Nainital" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Visit famous lakes: Bhimtal, Sattal & Naukuchiatal.</li>
-                </ul>
-
-                <ul>
-                  <li>Explore Eco Cave Garden, Snow View Point & Ropeway.</li>
-                  <li>Evening free for shopping & scenic walks.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="accordion faq st-program style1" id="accordion_day-6-uttarakhand">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-uttarakhand">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-uttarakhand" aria-expanded="false"
-            aria-controls="day-6-uttarakhand">
-            Day 6 – Departure from Uttarakhand
-          </button>
-        </h2>
-
-        <div id="st-day-6-uttarakhand" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-6-uttarakhand"
-          data-bs-parent="#accordion_day-6-uttarakhand">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/uttarakhand tour-6.jpg" alt="Day 6 Departure" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>After breakfast, check out from the hotel.</li>
-                </ul>
-
-                <ul>
-                  <li>Proceed for onward journey with beautiful Uttarakhand memories.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
     </div>
 
   </div>
 
-</div>
-
-<!-- itenary end -->
-
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/uttarakhand_1.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3">Uttarakhand</h5>
-                    <h1 class="display-5 mb-4">
-                        “Ladakh: Land of High Passes.”    </h1>
-                    <p class="mb-4">
-                     Uttarakhand, often called the “Land of Gods,” is a breathtaking Himalayan state known for its serene landscapes, sacred temples, and adventure-filled experiences. From the peaceful ghats of Haridwar and Rishikesh to the snow-covered peaks of Auli and the tranquil valleys of Nainital and Mussoorie, Uttarakhand offers the perfect blend of spirituality and natural beauty. </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                       “Where the mountains meet the sky.”
-                    </h1>
-                    <p class="mb-4">
-                      The state is also home to the famous Char Dham Yatra—Kedarnath, Badrinath, Yamunotri, and Gangotri—which draws millions of devotees every year. Whether you want to trek through lush forests, experience thrilling river rafting, seek blessings in ancient temples, or simply relax amidst the mountains, Uttarakhand promises unforgettable moments and soothing Himalayan vibes.
-                </div>
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/uttarakhand_2.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+</section>
+<!-- ==================== UTTARAKHAND TOUR PREMIUM SECTION END ===================== -->
     
 
  <!-- ###  footer Start  ###-->

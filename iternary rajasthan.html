@@ -27,13 +27,142 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://www.ewebdigital.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://www.ewebdigital.com/license/
-  ======================================================== -->
+  <style>
+/* PARALLAX HEADER */
+.parallax-banner-rajasthan {
+  background: url("assets/img/travel/rajasthan\ tour-1.jpg") center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-rajasthan::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+  color: #f7971e;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #f7971e;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(247,151,30,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #f7971e;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+  </style>
 </head>
 
 <body class="goa-page">
@@ -100,315 +229,153 @@
   <!-- main navbar ends -->
   <main class="main">
 
+<!-- ==================== RAJASTHAN TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1> Itenary for the Rajasthan</h1>
-        <p>Rajasthan, the largest state in India, is a vibrant land of royal heritage, majestic forts, golden deserts, colorful culture, and timeless traditions. Known as the Land of Kings, Rajasthan offers travelers a glimpse into a world of grandeur, history, and rich folklore that is unlike anywhere else in India.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Rajasthan</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-<!-- heading start -->
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Rajasthan</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
-    </div>
-
-    <!-- Header End -->
-    <!-- heading end -->
-
-<!-- itenary start -->
-
-  <div class="container p-5 m-5">
-
-  <div class="st-program-list">
-    <div class="accordion faq st-program style1" id="accordion_day-1-chandigarh-to-manali-voyage">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-chandigarh-to-manali-voyage">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-chandigarh-to-manali-voyage" aria-expanded="false"
-            aria-controls="day-1-chandigarh-to-manali-voyage">
-           Day 1: Arrive in Jaipur and explore the Pink City’s major highlights </button>
-        </h2>
-        <div id="st-day-1-chandigarh-to-manali-voyage" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-chandigarh-to-manali-voyage"
-          data-bs-parent="#accordion_day-1-chandigarh-to-manali-voyage" style="">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/rajasthan tour-1.jpg"
-                  alt="Day 1 Chandigarh To Manali Voyage" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Visit the iconic Hawa Mahal, City Palace, and Jantar Mantar. Spend the evening roaming the colourful local markets filled with jewellery, handicrafts, and traditional Rajasthani textiles.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Pink City’s major highlights. Visit the iconic Hawa Mahal, City Palace, and Jantar Mantar.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Jaipur and explore the Pink City’s major highlights. Visit the iconic Hawa Mahal, City Palace, and Jantar Mantar. Spend the evening roaming the colourful local markets filled with jewellery, handicrafts, and traditional Rajasthan.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-2-manali-to-kaza-via-atal-tunnel">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-manali-to-kaza-via-atal-tunnel">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-manali-to-kaza-via-atal-tunnel" aria-expanded="true"
-            aria-controls="day-2-manali-to-kaza-via-atal-tunnel">
-           Day 2: Start your day with a visit to the majestic Amber Fort, known for its stunning architecture and hilltop views. </button>
-        </h2>
-        <div id="st-day-2-manali-to-kaza-via-atal-tunnel" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-2-manali-to-kaza-via-atal-tunnel"
-          data-bs-parent="#accordion_day-2-manali-to-kaza-via-atal-tunnel">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/rajasthan tour-2.jpg"
-                  alt="Day 2 Manali To Kaza (via Atal Tunnel)" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">visit to the majestic Amber Fort, known for its stunning architecture and hilltop views.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Later, see Jal Mahal from the lakeside, explore Albert Hall Museum, and end your day at Birla Temple for a peaceful evening.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">stunning architecture and hilltop views. Later, see Jal Mahal from the lakeside, explore Albert Hall Museum, and end your day at Birla Temple for a peaceful evening.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-3-exploring-kaza">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-exploring-kaza">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-exploring-kaza" aria-expanded="true" aria-controls="day-3-exploring-kaza">
-            Day 3: Travel to Jodhpur, the Blue City, and explore the mighty Mehrangarh Fort.</button>
-        </h2>
-        <div id="st-day-3-exploring-kaza" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-3-exploring-kaza" data-bs-parent="#accordion_day-3-exploring-kaza">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/rajasthan tour-3.jpg"
-                  alt="Day 3 Exploring Kaza" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Walk through the serene Jaswant Thada and visit the bustling Clock Tower Market for spices, antiques, and local handicrafts before relaxing at your hotel.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Jodhpur, the Blue City, and explore the mighty Mehrangarh Fort. Walk through the serene Jaswant Thada and visit the bustling Clock Tower Market for spices, antiques, and local handicrafts before relaxing at your hotel.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-4-kaza-exploration-continues">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-kaza-exploration-continues">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-kaza-exploration-continues" aria-expanded="true"
-            aria-controls="day-4-kaza-exploration-continues">
-           Day 4: Head to Udaipur, the breathtaking City of Lakes. </button>
-        </h2>
-        <div id="st-day-4-kaza-exploration-continues" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-4-kaza-exploration-continues"
-          data-bs-parent="#accordion_day-4-kaza-exploration-continues">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/rajasthan tour-4.jpg"
-                  alt="Day 4 Kaza Exploration Continues" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Visit the grand City Palace overlooking Lake Pichola, stroll through the charming old streets, and enjoy a beautiful boat ride at sunset on the calm waters of the lake.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">the breathtaking City of Lakes. Visit the grand City Palace overlooking Lake Pichola, stroll through the charming old streets, and enjoy a beautiful boat ride
-                    </li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-cherishing-the-lake-and-driving-to-manali">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-cherishing-the-lake-and-driving-to-manali" aria-expanded="true"
-            aria-controls="day-5-cherishing-the-lake-and-driving-to-manali">
-           Day 5: Continue exploring Udaipur with visits to Saheliyon Ki Bari, Jagdish Temple, and Fateh Sagar Lake. </button>
-        </h2>
-        <div id="st-day-5-cherishing-the-lake-and-driving-to-manali" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-5-cherishing-the-lake-and-driving-to-manali"
-          data-bs-parent="#accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/rajasthan tour-5.jpg"
-                  alt="Day 5 Cherishing the Lake And Driving To Manali" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Capture scenic views, enjoy café hopping, and experience Udaipur’s peaceful vibe throughout the day.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Udaipur with visits to Saheliyon Ki Bari, Jagdish Temple, and Fateh Sagar Lake. Capture scenic views, enjoy café hopping, and experience Udaipur’s peaceful vibe throughout the day.
-                    </li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-6-bidding-adieu-to-the-mountains">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-bidding-adieu-to-the-mountains">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-bidding-adieu-to-the-mountains" aria-expanded="true"
-            aria-controls="day-6-bidding-adieu-to-the-mountains">
-           Day 6: On your final day, make a short trip to either Kumbhalgarh Fort or Chittorgarh For </button>
-        </h2>
-        <div id="st-day-6-bidding-adieu-to-the-mountains" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-6-bidding-adieu-to-the-mountains"
-          data-bs-parent="#accordion_day-6-bidding-adieu-to-the-mountains">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/rajasthan tour-6.jpg"
-                  alt="Day 6 Bidding Adieu To The Mountains" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">make a short trip to either Kumbhalgarh Fort or Chittorgarh Fort—both rich in history and offering stunning views. Later, return to Udaipur or Jaipur for departure, completing your royal Rajasthan journey.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-rajasthan d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Royal Rajasthan Experience</h1>
+      <p class="fs-5 opacity-75">6 Nights / 7 Days • Jaipur • Jodhpur • Udaipur • Jaisalmer • Pushkar</p>
+      <div class="price-badge">Starting at ₹35,000 / person</div>
     </div>
   </div>
-  </div>
-<!-- itenary end -->
 
-    <!-- About Start -->
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/Locations/national-tours/national-tours/rajasthan 1.jpeg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3">Rajasthan</h5>
-                    <h1 class="display-5 mb-4">
-                        “Rajasthan: Land of Kings & Legends.”
-                    </h1>
-                    <p class="mb-4">
-                        Rajasthan, the Land of Kings & Legends, is a place where history comes alive in every fort, palace, and narrow alley. From the majestic Amber Fort in Jaipur to the golden sands of Jaisalmer, the state reflects centuries of royal heritage, vibrant culture, and timeless stories of valor and grandeur. Every corner of Rajasthan whispers tales of kings and queens, while colorful festivals, traditional music, and intricate handicrafts showcase the living legacy of this regal land.
-                    </p>
-                </div>
-            </div>
+  <div class="container py-5">
+
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Experience the royal heritage, golden deserts, and magnificent forts of Rajasthan.  
+        This 6 Nights / 7 Days Rajasthan package covers Jaipur, Jodhpur, Udaipur, Jaisalmer, 
+        and Pushkar. Enjoy deluxe hotels, traditional Rajasthani meals, guided sightseeing, 
+        desert safaris, and cultural experiences for a truly unforgettable journey.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>7 Days / 6 Nights</p>
+          </div>
         </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                       “Desert dreams and royal vibes.”
-                    </h1>
-                    <p class="mb-4">
-Every city, from Jaipur’s bustling streets to Jaisalmer’s serene desert landscapes, is filled with stories of kings, queens, and warriors, blending history with vibrant culture. As you ride camels through the Thar Desert, watch sunsets paint the sands in fiery hues, and explore ornate palaces and bustling bazaars, Rajasthan immerses you in a world where adventure, heritage, and the magic of the desert come alive in every moment.                    </p>
-                </div>
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/Locations/national-tours/national-tours/rajasthan 2.webp" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹35,000 Per Person</p>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Departures: Oct–Mar</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- About End -->
-    
+
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (6N / 7D)</h3>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Arrival in Jaipur</h5>
+          <p>Airport/railway pickup. Check-in to hotel. Evening visit to local markets.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 2 – Jaipur Sightseeing</h5>
+          <p>Amber Fort, City Palace, Hawa Mahal, Jantar Mantar, and evening cultural show.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-mountain"></i></div>
+        <div class="content">
+          <h5>Day 3 – Jaipur → Jodhpur</h5>
+          <p>Drive to Jodhpur. Visit Mehrangarh Fort, Jaswant Thada, and local markets.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-bank"></i></div>
+        <div class="content">
+          <h5>Day 4 – Jodhpur → Jaisalmer</h5>
+          <p>Drive to Jaisalmer. Explore Golden Fort, Patwon Ki Haveli, and desert sunset.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-sun"></i></div>
+        <div class="content">
+          <h5>Day 5 – Jaisalmer → Udaipur</h5>
+          <p>Travel to Udaipur. Visit City Palace, Lake Pichola, and sunset boat ride.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-shop"></i></div>
+        <div class="content">
+          <h5>Day 6 – Udaipur → Pushkar</h5>
+          <p>Drive to Pushkar. Explore Brahma Temple, Pushkar Lake, and local markets.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 7 – Departure</h5>
+          <p>Drop at Jaipur airport/railway station with royal Rajasthan memories.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>3/4 star deluxe hotels</li>
+            <li>Breakfast & Dinner</li>
+            <li>Private AC vehicle</li>
+            <li>Tour Manager support</li>
+            <li>Guided sightseeing & tickets</li>
+            <li>Pickup & drop from airport/railway station</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Airfare / Train tickets</li>
+            <li>Lunches not mentioned</li>
+            <li>Personal expenses & tips</li>
+            <li>Optional activities & cultural shows</li>
+            <li>Anything not mentioned in inclusions</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ==================== RAJASTHAN TOUR PREMIUM SECTION END ===================== -->
 
 
     <!-- ###  footer Start  ###-->

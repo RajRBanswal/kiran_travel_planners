@@ -26,14 +26,141 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<style>
+    /* PARALLAX HEADER */
+.parallax-banner-kashmir {
+  background: url("assets/img/travel/kashmir\ tour-5.jpg") center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-kashmir::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {
+  background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://www.ewebdigital.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://www.ewebdigital.com/license/
-  ======================================================== -->
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+ color: #ff7f4d;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff7f4d;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+ box-shadow: 0 8px 20px rgba(255,127,77,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+ color: #ff7f4d;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+</style>
 </head>
 
 <body class="goa-page">
@@ -102,321 +229,154 @@
   <main class="main">
 
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Itenary for the Kashmir</h1>
-        <p>Kashmir, often called Paradise on Earth, is a breathtaking land of snow-covered mountains, shimmering lakes, endless meadows, and timeless beauty. Surrounded by the mighty Himalayas, Kashmir offers a dreamlike experience filled with serenity, fresh air, and nature’s purest charm.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Kashmir</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
+   <!-- ==================== KASHMIR TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-<!-- heading start -->
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Kashmir</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
-    </div>
-
-    <!-- Header End -->
-    <!-- heading end -->
-
-
-    <!-- itenary start -->
-
-  <div class="container p-5 m-5">
-
-  <div class="st-program-list">
-    <div class="accordion faq st-program style1" id="accordion_day-1-chandigarh-to-manali-voyage">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-chandigarh-to-manali-voyage">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-chandigarh-to-manali-voyage" aria-expanded="false"
-            aria-controls="day-1-chandigarh-to-manali-voyage">
-           Day 1: Arrive in Srinagar and begin your Kashmir journey with a peaceful Shikara ride on the iconic Dal Lake. </button>
-        </h2>
-        <div id="st-day-1-chandigarh-to-manali-voyage" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-chandigarh-to-manali-voyage"
-          data-bs-parent="#accordion_day-1-chandigarh-to-manali-voyage" style="">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kashmir tour-1.jpg"
-                  alt="Day 1 Chandigarh To Manali Voyage" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">. Feel the calmness of the floating gardens, vibrant markets, and surrounding mountains.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">After checking into your hotel or houseboat, explore the local markets of Srinagar and enjoy a relaxing evening with a traditional Kashmiri dinner.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Feel the calmness of the floating gardens, vibrant markets, and surrounding mountains. After checking into your hotel or houseboat, explore the local markets of Srinagar and enjoy a relaxing evening.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-2-manali-to-kaza-via-atal-tunnel">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-manali-to-kaza-via-atal-tunnel">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-manali-to-kaza-via-atal-tunnel" aria-expanded="true"
-            aria-controls="day-2-manali-to-kaza-via-atal-tunnel">
-            Day 2: Spend your day exploring Srinagar’s famous Mughal Gardens—Shalimar Bagh, Nishat Bagh, and Chashme Shahi—each offering beautiful landscapes and charming fountains. </button>
-        </h2>
-        <div id="st-day-2-manali-to-kaza-via-atal-tunnel" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-2-manali-to-kaza-via-atal-tunnel"
-          data-bs-parent="#accordion_day-2-manali-to-kaza-via-atal-tunnel">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kashmir tour-2.jpg"
-                  alt="Day 2 Manali To Kaza (via Atal Tunnel)" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Visit the Shankaracharya Temple for a panoramic view of the city. Later, enjoy a royal shopping experience at markets known for pashmina, handicrafts, and Kashmiri dry fruits.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">where floating gardens, calm waters, and the surrounding mountains create the perfect introduction to the paradise of India. Spend time exploring Srinagar’s vibrant local markets and enjoy a peaceful night in a traditional houseboat or hotel.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">The drive will not be an ordinary one as you will be driving
-                      through the world-renowned Rohtang Pass, and don’t forget to click pictures of the snow walls on
-                      both sides of the road.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">To add the cherry on top of the cake, you will be driving through
-                      one of the newest marvels of the country, the Atal Tunnel.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-3-exploring-kaza">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-exploring-kaza">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-exploring-kaza" aria-expanded="true" aria-controls="day-3-exploring-kaza">
-           Day 3: Travel to Gulmarg, the “Meadow of Flowers,” known for its breathtaking landscapes. </button>
-        </h2>
-        <div id="st-day-3-exploring-kaza" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-3-exploring-kaza" data-bs-parent="#accordion_day-3-exploring-kaza">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kashmir tour-3.jpg"
-                  alt="Day 3 Exploring Kaza" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">“Meadow of Flowers,” known for its breathtaking landscapes. Take the famous Gulmarg Gondola, one of the highest cable cars in the world.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">offering spectacular views of snow-capped peaks. Enjoy activities like skiing (in winter), snow biking, or a simple nature walk. Return to Srinagar in the evening and unwind.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">amous for its meadows and snow-covered slopes. Take the world-renowned Gulmarg Gondola for breathtaking views and indulge in snow activities like skiing, sledge rides, or snow biking.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-4-kaza-exploration-continues">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-kaza-exploration-continues">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-kaza-exploration-continues" aria-expanded="true"
-            aria-controls="day-4-kaza-exploration-continues">
-            Day 4: Head to Pahalgam, the valley of shepherds. </button>
-        </h2>
-        <div id="st-day-4-kaza-exploration-continues" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-4-kaza-exploration-continues"
-          data-bs-parent="#accordion_day-4-kaza-exploration-continues">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kashmir tour-4.jpg"
-                  alt="Day 4 Kaza Exploration Continues" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">The journey is scenic, with rivers, mountains, and saffron fields. Visit Aru Valley, Betaab Valley, and Chandanwari, each filled with pine forests and stunning viewpoints.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Spend your evening along the beautiful Lidder River and soak in the peaceful charm of Pahalgam before returning to your hotel.
-                    </li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Pahalgam, the valley of shepherds. The journey is scenic, with rivers, mountains, and saffron fields. Visit Aru Valley, Betaab Valley, and Chandanwari, each filled with pine forests and stunning viewpoints. Spend your evening along the beautiful Lidder River and soak in the peaceful.</li>
-                    
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-cherishing-the-lake-and-driving-to-manali">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-cherishing-the-lake-and-driving-to-manali" aria-expanded="true"
-            aria-controls="day-5-cherishing-the-lake-and-driving-to-manali">
-           Day 5: Make your way to Sonmarg, the “Meadow of Gold.” </button>
-        </h2>
-        <div id="st-day-5-cherishing-the-lake-and-driving-to-manali" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-5-cherishing-the-lake-and-driving-to-manali"
-          data-bs-parent="#accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kashmir tour-5.jpg"
-                  alt="Day 5 Cherishing the Lake And Driving To Manali" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">This stunning valley offers snow activities almost throughout the year.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Enjoy a pony ride to Thajiwas Glacier or simply take in the majestic views of the Himalayas.The crisp mountain air and pristine environment make this day truly memorable. Return to Srinagar for the night.
-                    </li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-6-bidding-adieu-to-the-mountains">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-bidding-adieu-to-the-mountains">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-bidding-adieu-to-the-mountains" aria-expanded="true"
-            aria-controls="day-6-bidding-adieu-to-the-mountains">
-           Day 6: Spend your final day exploring more of Srinagar or relaxing on the houseboat. </button>
-        </h2>
-        <div id="st-day-6-bidding-adieu-to-the-mountains" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-6-bidding-adieu-to-the-mountains"
-          data-bs-parent="#accordion_day-6-bidding-adieu-to-the-mountains">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kashmir tour-6.jpg"
-                  alt="Day 6 Bidding Adieu To The Mountains" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Do some last-minute shopping for saffron, kahwa, and Kashmiri carpets. With warm memories of valleys, mountains, and serene lakes, head to the airport for your return journey, completing your unforgettable Kashmir tour.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-kashmir d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Majestic Kashmir Delight</h1>
+      <p class="fs-5 opacity-75">6 Nights / 7 Days • Srinagar • Gulmarg • Sonmarg • Pahalgam • Dal Lake</p>
+      <div class="price-badge">Starting at ₹28,500 / person</div>
     </div>
   </div>
-  </div>
-<!-- itenary end -->
 
-    <!-- About Start -->
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/Locations/national-tours/national-tours/kashmir-1.jpeg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3"> Kashmir</h5>
-                    <h1 class="display-5 mb-4">
-                       “Where beauty sleeps in every valley.”
-                    </h1>
-                    <p class="mb-4">
-                       Kashmir: Paradise on Earth — a land where every view feels like a masterpiece painted by nature. Wrapped in snow-capped mountains, shimmering lakes, blooming meadows, and endless valleys, Kashmir offers a serenity that touches the soul instantly. From the gentle glide of shikaras on Dal Lake to the breathtaking landscapes of Gulmarg and Pahalgam, every moment here feels magical and pure.
-                    </p>
-                </div>
-            </div>
+  <div class="container py-5">
+
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Discover the breathtaking valleys, snow-capped peaks, Shikara rides, gardens, and charming
+        villages of Kashmir in this premium 6 Nights / 7 Days group journey by 
+        <strong>Kiran Travel Planners</strong>. Includes deluxe hotels, meals, transport, sightseeing,
+        Shikara ride, tour manager & key entry tickets.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>7 Days / 6 Nights</p>
+          </div>
         </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                       “Nature’s poetry in every corner.”
-                    </h1>
-                    <p class="mb-4">
-                       Kashmir is a place where you can feel nature’s poetry in every corner — from the snow-crowned mountains that stand like verses carved in white, to the shimmering lakes that reflect the sky like a gentle rhyme. Every valley, every whisper of the wind, every blooming flower feels like a line written by nature itself. Whether you’re watching the sunrise over Dal Lake, walking through the meadows of Gulmarg, or standing beneath the tall chinar trees
-                </div>
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/Locations/national-tours/national-tours/kashmir-2.jpeg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹28,500 Per Person</p>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Fixed Departures Available</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- About End -->
+
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (6N / 7D)</h3>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Arrival Srinagar</h5>
+          <p>Arrive in Srinagar. Check-in & enjoy a relaxing Shikara Ride on Dal Lake.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-flower3"></i></div>
+        <div class="content">
+          <h5>Day 2 – Srinagar → Sonmarg → Srinagar</h5>
+          <p>Full-day trip to Sonmarg: Thajiwas Glacier, pony rides & scenic landscapes.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
+        <div class="content">
+          <h5>Day 3 – Srinagar → Gulmarg</h5>
+          <p>Visit Gulmarg. Optional Gondola ride to Phase 1/2 (tickets extra).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-cloud-snow-fill"></i></div>
+        <div class="content">
+          <h5>Day 4 – Gulmarg → Pahalgam</h5>
+          <p>Drive to Pahalgam. Visit Aru Valley, Betaab Valley & Chandanwadi.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-tree"></i></div>
+        <div class="content">
+          <h5>Day 5 – Pahalgam Local</h5>
+          <p>Enjoy river valley walks, pony rides & leisure time in the pine forests.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 6 – Pahalgam → Srinagar</h5>
+          <p>Return to Srinagar. Visit Mughal Gardens: Shalimar, Nishat & Chashmeshahi.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 7 – Departure</h5>
+          <p>Transfer to airport with beautiful memories of Kashmir.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>6 Nights accommodation in deluxe hotels</li>
+            <li>Daily Breakfast & Dinner</li>
+            <li>Shikara Ride on Dal Lake</li>
+            <li>AC transport for entire tour</li>
+            <li>Tour Manager</li>
+            <li>Entry tickets as per itinerary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Flight / Train tickets</li>
+            <li>Gondola Tickets (Gulmarg)</li>
+            <li>Personal expenses & shopping</li>
+            <li>Pony rides, rafting, adventure sports</li>
+            <li>Any cost due to weather/road issues</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ==================== KASHMIR TOUR PREMIUM SECTION END ===================== -->
+
     
 
 

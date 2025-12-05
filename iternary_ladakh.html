@@ -27,13 +27,141 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://www.ewebdigital.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://www.ewebdigital.com/license/
-  ======================================================== -->
+ <style>
+  /* PARALLAX HEADER */
+.parallax-banner-ladakh {
+  background: url("assets/img/travel/ladakh\ tour-2.jpg") center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-ladakh::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {  background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+    color: #ff7b47;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff7b47;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(142,68,173,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+ </style>
 </head>
 
 <body class="goa-page">
@@ -103,338 +231,161 @@
 
   <main class="main">
 
+      <!-- ==================== LADAKH TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Iternary for Ladakh</h1>
-        <p>Ladakh, often called the “Land of High Passes,” is one of India’s most stunning and unique travel destinations. Located in the northern Himalayas, Ladakh is famous for its snow-covered mountains, crystal-clear lakes, ancient monasteries, and dramatic landscapes that look straight out of a dream.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Ladakh</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Ladakh</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-ladakh d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Ladakh Adventure</h1>
+      <p class="fs-5 opacity-75">7 Nights / 8 Days • Leh • Nubra Valley • Pangong Lake • Magnetic Hill • Shanti Stupa</p>
+      <div class="price-badge">Starting at ₹55,000 / person</div>
     </div>
+  </div>
 
-    <!-- Header End -->
+  <div class="container py-5">
 
-<!-- itenary start -->
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Explore the mystical landscapes of Ladakh — high mountains, blue lakes, monasteries, 
+        and desert-like valleys. This 7 Nights / 8 Days Ladakh package covers Leh, Nubra Valley, 
+        Pangong Lake, Magnetic Hill, Shanti Stupa, and local markets. Enjoy deluxe hotels, 
+        meals, AC transport, sightseeing, and unforgettable Himalayan adventures.
+      </p>
 
-<div class="container p-5 m-5">
-
-  <div class="st-program-list">
-
-    <!-- Day 1 -->
-    <div class="accordion faq st-program style1" id="accordion_day-1-chandigarh-to-manali-voyage">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-chandigarh-to-manali-voyage">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-chandigarh-to-manali-voyage" aria-expanded="false"
-            aria-controls="day-1-chandigarh-to-manali-voyage">
-            Day 1 – Arrival in Leh (Ladakh)
-          </button>
-        </h2>
-        <div id="st-day-1-chandigarh-to-manali-voyage" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-chandigarh-to-manali-voyage"
-          data-bs-parent="#accordion_day-1-chandigarh-to-manali-voyage">
-
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/ladakh tour-1.jpg" alt="Day 1 Leh Arrival" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-                <ul>
-                  <li>Arrive at Leh Airport and transfer to the hotel for acclimatization.</li>
-                </ul>
-
-                <ul>
-                  <li>Rest for the first half of the day due to high altitude.</li>
-                  <li>Evening visit to Leh Market & Shanti Stupa for a beautiful sunset.</li>
-                </ul>
-              </div>
-            </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>8 Days / 7 Nights</p>
           </div>
-
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹55,000 Per Person</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Departures: May–Sep</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Day 2 -->
-    <div class="accordion faq st-program style1" id="accordion_day-2-manali-to-kaza-via-atal-tunnel">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-manali-to-kaza-via-atal-tunnel">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-manali-to-kaza-via-atal-tunnel" aria-expanded="false"
-            aria-controls="day-2-manali-to-kaza-via-atal-tunnel">
-            Day 2 – Leh Sightseeing
-          </button>
-        </h2>
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (7N / 8D)</h3>
 
-        <div id="st-day-2-manali-to-kaza-via-atal-tunnel" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-2-manali-to-kaza-via-atal-tunnel"
-          data-bs-parent="#accordion_day-2-manali-to-kaza-via-atal-tunnel">
+    <div class="timeline">
 
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/ladakh tour-2.jpg" alt="Day 2 Leh Sightseeing" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Visit Hall of Fame, a museum dedicated to Indian Army heroes.</li>
-                </ul>
-
-                <ul>
-                  <li>Explore Magnetic Hill, Pathar Sahib Gurudwara & Sangam (Indus–Zanskar confluence).</li>
-                  <li>Visit Leh Palace & return to hotel for overnight stay.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Arrival in Leh</h5>
+          <p>Airport pickup. Rest for acclimatization. Evening visit Shanti Stupa and Leh Market.</p>
         </div>
       </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-mountain"></i></div>
+        <div class="content">
+          <h5>Day 2 – Leh Local Sightseeing</h5>
+          <p>Visit Leh Palace, Shey Palace, Thiksey Monastery, and Hemis Monastery.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-bank"></i></div>
+        <div class="content">
+          <h5>Day 3 – Leh → Nubra Valley</h5>
+          <p>Drive via Khardung La Pass. Visit Diskit Monastery and Hunder Sand Dunes.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-sun"></i></div>
+        <div class="content">
+          <h5>Day 4 – Nubra Valley → Pangong Lake</h5>
+          <p>Drive to Pangong Lake. Overnight stay near the lake with mesmerizing sunset views.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-water"></i></div>
+        <div class="content">
+          <h5>Day 5 – Pangong Lake → Leh</h5>
+          <p>Return to Leh. Stop at Chang La Pass and local viewpoints.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
+        <div class="content">
+          <h5>Day 6 – Magnetic Hill & Lamayuru Monastery</h5>
+          <p>Visit Magnetic Hill, Lamayuru Monastery, and explore local villages.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-shop"></i></div>
+        <div class="content">
+          <h5>Day 7 – Leh Leisure & Local Market</h5>
+          <p>Leisure day to explore Leh markets, Cafes, and optional activities.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 8 – Departure</h5>
+          <p>Drop at Leh Airport with unforgettable memories of Ladakh.</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Day 3 -->
-    <div class="accordion faq st-program style1" id="accordion_day-3-exploring-kaza">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-exploring-kaza">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-exploring-kaza" aria-expanded="false"
-            aria-controls="day-3-exploring-kaza">
-            Day 3 – Leh to Nubra Valley (via Khardung La)
-          </button>
-        </h2>
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
 
-        <div id="st-day-3-exploring-kaza" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-3-exploring-kaza"
-          data-bs-parent="#accordion_day-3-exploring-kaza">
+    <div class="row g-4">
 
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/ladakh tour-3.jpg" alt="Day 3 Nubra Valley" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to Nubra Valley via Khardung La – one of the world's highest motorable passes.</li>
-                </ul>
-
-                <ul>
-                  <li>Visit Diskit Monastery & enjoy the panoramic valley views.</li>
-                  <li>Experience camel ride on the cold desert dunes of Hunder.</li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>3/4 star deluxe hotels</li>
+            <li>Breakfast & Dinner</li>
+            <li>Private AC vehicle</li>
+            <li>Tour Manager support</li>
+            <li>Guided sightseeing & permits</li>
+            <li>Pickup & drop from Leh Airport</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Day 4 -->
-    <div class="accordion faq st-program style1" id="accordion_day-4-kaza-exploration-continues">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-kaza-exploration-continues">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-kaza-exploration-continues" aria-expanded="false"
-            aria-controls="day-4-kaza-exploration-continues">
-            Day 4 – Nubra Valley to Pangong Lake
-          </button>
-        </h2>
-
-        <div id="st-day-4-kaza-exploration-continues" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-4-kaza-exploration-continues"
-          data-bs-parent="#accordion_day-4-kaza-exploration-continues">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/ladakh tour-4.jpg" alt="Day 4 Pangong Lake" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Drive to the breathtaking Pangong Lake via Shyok route.</li>
-                </ul>
-
-                <ul>
-                  <li>Spend time at the iconic blue lake famous from Bollywood films.</li>
-                  <li>Overnight stay in lakeside camps under starry sky.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Airfare / Train tickets</li>
+            <li>Lunches not mentioned</li>
+            <li>Personal expenses & tips</li>
+            <li>Optional adventure activities</li>
+            <li>Anything not mentioned in inclusions</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Day 5 -->
-    <div class="accordion faq st-program style1" id="accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-cherishing-the-lake-and-driving-to-manali">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-cherishing-the-lake-and-driving-to-manali" aria-expanded="false"
-            aria-controls="day-5-cherishing-the-lake-and-driving-to-manali">
-            Day 5 – Pangong Lake to Leh (via Changla Pass)
-          </button>
-        </h2>
-
-        <div id="st-day-5-cherishing-the-lake-and-driving-to-manali" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-5-cherishing-the-lake-and-driving-to-manali"
-          data-bs-parent="#accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/ladakh tour-5.jpg" alt="Day 5 Return to Leh" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>Enjoy sunrise at Pangong Lake before returning to Leh.</li>
-                </ul>
-
-                <ul>
-                  <li>Drive through Changla Pass and reach Leh by afternoon.</li>
-                  <li>Evening is free for shopping and leisure activities.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="accordion faq st-program style1" id="accordion_day-6-bidding-adieu-to-the-mountains">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-bidding-adieu-to-the-mountains">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-bidding-adieu-to-the-mountains" aria-expanded="false"
-            aria-controls="day-6-bidding-adieu-to-the-mountains">
-            Day 6 – Departure from Leh
-          </button>
-        </h2>
-
-        <div id="st-day-6-bidding-adieu-to-the-mountains" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-6-bidding-adieu-to-the-mountains"
-          data-bs-parent="#accordion_day-6-bidding-adieu-to-the-mountains">
-
-          <div class="accordion-body">
-            <div class="row">
-
-              <div class="col-lg-4">
-                <img src="./assets/img/travel/ladakh tour-6.jpg" alt="Day 6 Departure" class="img-fluid">
-              </div>
-
-              <div class="col-lg-8">
-
-                <ul>
-                  <li>After breakfast, check out from hotel.</li>
-                </ul>
-
-                <ul>
-                  <li>Transfer to Leh Airport with unforgettable Ladakh memories.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
     </div>
 
   </div>
 
-</div>
-
-<!-- itenary end -->
-
-
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/ladakh_1.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3">Ladakh</h5>
-                    <h1 class="display-5 mb-4">
-                        “Ladakh: Land of High Passes.”    </h1>
-                    <p class="mb-4">
-                     “Land of High Passes,” is one of India’s most stunning and unique travel destinations. Located in the northern Himalayas, Ladakh is famous for its snow-covered mountains, crystal-clear lakes, ancient monasteries, and dramatic landscapes that look straight out of a dream. With its peaceful Buddhist culture, high-altitude deserts, and breathtaking views, Ladakh offers a rare blend of spirituality and adventure.    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                       “Where the mountains meet the sky.”
-                    </h1>
-                    <p class="mb-4">
-                      From the blue waters of Pangong Lake, the thrill of driving through Khardung La Pass, the magic of the Nubra Valley sand dunes, to the serene beauty of Leh’s monasteries and markets, every corner of Ladakh has a story to tell. The region also attracts trekkers, bikers, nature lovers, and those seeking silence, calm, and unforgettable scenery.
-                </div>
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/ladakh_2.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+</section>
+<!-- ==================== LADAKH TOUR PREMIUM SECTION END ===================== -->
     
 
  <!-- ###  footer Start  ###-->

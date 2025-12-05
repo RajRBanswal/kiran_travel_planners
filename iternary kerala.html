@@ -26,14 +26,142 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<style>
+  /* PARALLAX HEADER */
+.parallax-banner-kerala {
+  background: url("assets/img/travel/kerala\ tour-1.jpg") center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-kerala::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {
+  background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://www.ewebdigital.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://www.ewebdigital.com/license/
-  ======================================================== -->
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+  color: #ff7b47;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff7b47;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(255,123,71,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff7b47;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+</style>
 </head>
 
 <body class="goa-page">
@@ -100,317 +228,161 @@
   <!-- main navbar ends -->
   <main class="main">
 
+ <!-- ==================== KERALA TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Itenary for the Kerala</h1>
-        <p>Located along the southwest coast of India, Kerala is a paradise where nature, tradition, and serenity blend in perfect harmony, offering travelers an experience that feels both refreshing and unforgettable.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Kerala</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Kerala</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
-    </div>
-
-    <!-- Header End -->
-
-<!-- itenary start -->
-
-  <div class="container p-5 m-5">
-
-  <div class="st-program-list">
-    <div class="accordion faq st-program style1" id="accordion_day-1-chandigarh-to-manali-voyage">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-chandigarh-to-manali-voyage">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-chandigarh-to-manali-voyage" aria-expanded="false"
-            aria-controls="day-1-chandigarh-to-manali-voyage">
-           Day 1: Arrive in Kochi and begin your Kerala journey by exploring the city’s rich mix of culture and history. </button>
-        </h2>
-        <div id="st-day-1-chandigarh-to-manali-voyage" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-chandigarh-to-manali-voyage"
-          data-bs-parent="#accordion_day-1-chandigarh-to-manali-voyage" style="">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kerala tour-1.jpg"
-                  alt="Day 1 Chandigarh To Manali Voyage" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Visit iconic spots such as Fort Kochi, the Chinese Fishing Nets, St. Francis Church, and the Dutch Palace.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Walk along the charming streets filled with art cafés and colonial buildings. In the evening, enjoy a peaceful sunset at Marine Drive before returning to your hotel.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Kochi and begin your Kerala journey by exploring the city’s rich mix of culture and history. Visit iconic spots such as Fort Kochi, the Chinese Fishing Nets, St. Francis Church, and the Dutch Palace. Walk along the charming streets filled with art cafés and colonial buildings. In the evening, enjoy a peaceful sunset at Marine Drive before returning to your hotel.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-2-manali-to-kaza-via-atal-tunnel">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-manali-to-kaza-via-atal-tunnel">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-manali-to-kaza-via-atal-tunnel" aria-expanded="true"
-            aria-controls="day-2-manali-to-kaza-via-atal-tunnel">
-            Day 2: Travel to Munnar, the land of misty hills and tea gardens.</button>
-        </h2>
-        <div id="st-day-2-manali-to-kaza-via-atal-tunnel" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-2-manali-to-kaza-via-atal-tunnel"
-          data-bs-parent="#accordion_day-2-manali-to-kaza-via-atal-tunnel">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kerala tour-2.jpg"
-                  alt="Day 2 Manali To Kaza (via Atal Tunnel)" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">The scenic drive itself is a treat with waterfalls and lush greenery along the way. After checking into your hotel, spend the evening walking through local markets or enjoying the cool climate.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">the land of misty hills and tea gardens. The scenic drive itself is a treat with waterfalls and lush greenery along the way. After checking into your hotel, spend the evening walking through local markets or enjoying the cool climate. Take in the beauty of the hills and relax for the night.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Walk along the charming streets filled with art cafés and colonial buildings. In the evening, enjoy a peaceful sunset at Marine Drive before returning to your hotel.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">To add the cherry on top of the cake, you will be driving through
-                      one of the newest marvels of the country, the Atal Tunnel.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-3-exploring-kaza">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-exploring-kaza">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-exploring-kaza" aria-expanded="true" aria-controls="day-3-exploring-kaza">
-            Day 3: Explore the best of Munnar, starting with the vast tea plantations and the Tata Tea Museum to learn about Kerala’s tea heritage. </button>
-        </h2>
-        <div id="st-day-3-exploring-kaza" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-3-exploring-kaza" data-bs-parent="#accordion_day-3-exploring-kaza">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kerala tour-3.jpg"
-                  alt="Day 3 Exploring Kaza" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Visit Eravikulam National Park to spot the Nilgiri Tahr and enjoy the panoramic views.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Later, explore Mattupetty Dam, Echo Point, and Kundala Lake. End your day with a peaceful stroll amidst the greenery.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Munnar, starting with the vast tea plantations and the Tata Tea Museum to learn about Kerala’s tea heritage. Visit Eravikulam National Park to spot the Nilgiri Tahr and enjoy the panoramic views. Later, explore Mattupetty Dam, Echo Point, and Kundala Lake. End your day with a peaceful stroll amidst the greenery.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-4-kaza-exploration-continues">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-kaza-exploration-continues">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-kaza-exploration-continues" aria-expanded="true"
-            aria-controls="day-4-kaza-exploration-continues">
-            Day 4: Head to Thekkady, known for its wildlife and spice plantations. </button>
-        </h2>
-        <div id="st-day-4-kaza-exploration-continues" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-4-kaza-exploration-continues"
-          data-bs-parent="#accordion_day-4-kaza-exploration-continues">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kerala tour-4.jpg"
-                  alt="Day 4 Kaza Exploration Continues" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">After checking in, visit the Periyar Wildlife Sanctuary, where you can enjoy a lake boat ride to spot animals like elephants, deer, and various birds.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Explore a local spice plantation to learn about Kerala’s famous spices. Enjoy a traditional cultural show such as Kathakali or Kalaripayattu in the evening.
-                    </li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">visit the Periyar Wildlife Sanctuary, where you can enjoy a lake boat ride to spot animals like elephants, deer, and various birds. Explore a local spice plantation to learn about Kerala’s famous spices</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-cherishing-the-lake-and-driving-to-manali">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-cherishing-the-lake-and-driving-to-manali" aria-expanded="true"
-            aria-controls="day-5-cherishing-the-lake-and-driving-to-manali">
-          Day 5: Travel to Alleppey, the backwater paradise of Kerala. </button>
-        </h2>
-        <div id="st-day-5-cherishing-the-lake-and-driving-to-manali" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-5-cherishing-the-lake-and-driving-to-manali"
-          data-bs-parent="#accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kerala tour-5.jpg"
-                  alt="Day 5 Cherishing the Lake And Driving To Manali" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Check into a houseboat for a unique experience as it cruises through serene lagoons, palm-fringed canals, and tranquil villages.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Enjoy freshly prepared Kerala meals on board and relax while soaking in the breathtaking views. Spend the night on the houseboat for a truly memorable stay.
-                    </li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-6-bidding-adieu-to-the-mountains">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-bidding-adieu-to-the-mountains">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-bidding-adieu-to-the-mountains" aria-expanded="true"
-            aria-controls="day-6-bidding-adieu-to-the-mountains">
-           Day 6: Disembark from the houseboat and drive back to Kochi. </button>
-        </h2>
-        <div id="st-day-6-bidding-adieu-to-the-mountains" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-6-bidding-adieu-to-the-mountains"
-          data-bs-parent="#accordion_day-6-bidding-adieu-to-the-mountains">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/kerala tour-6.jpg"
-                  alt="Day 6 Bidding Adieu To The Mountains" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Depending on your departure time, visit local markets for handicrafts, spices, and souvenirs. Reflect on your peaceful Kerala experience before heading to the airport or railway station for your journey back home.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-kerala d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Kerala’s Wonders & Backwaters</h1>
+      <p class="fs-5 opacity-75">7 Nights / 8 Days • Kochi • Munnar • Thekkady • Alleppey • Kovalam</p>
+      <div class="price-badge">Starting at ₹28,000 / person</div>
     </div>
   </div>
-  </div>
-<!-- itenary end -->
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/Locations/national-tours/national-tours/kerala.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3"> Kerala</h5>
-                    <h1 class="display-5 mb-4">
-                        “Where nature breathes and the soul rests.”
-                    </h1>
-                    <p class="mb-4">
-                        Kerala is truly a place where nature breathes and the soul rests — a serene paradise filled with lush green landscapes, quiet backwaters, misty hills, and soothing coastal winds. Every corner of this beautiful state feels alive with calmness, from the gentle sway of coconut trees to the slow flow of the backwaters that reflect the sky like a mirror.
-                    </p>
-                </div>
-            </div>
+  <div class="container py-5">
+
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Explore the lush landscapes of God’s Own Country. From tea gardens in Munnar to the wildlife-rich forests of Thekkady,  
+        serene backwaters of Alleppey, houseboat stay, and pristine beaches in Kovalam—this 7 Nights / 8 Days journey offers  
+        relaxation, adventure, and cultural experiences. Enjoy deluxe hotels, meals, AC transport, guided tours, and a houseboat stay.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>8 Days / 7 Nights</p>
+          </div>
         </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                        “Green everywhere, peace in every breath.”
-                    </h1>
-                    <p class="mb-4">
-                       Kerala is a land where you find green everywhere, and peace in every breath — a place where nature paints the world in countless shades of emerald. From endless tea gardens and dense coconut groves to calm backwaters and mist-covered hills, every view feels soothing and refreshing.
-                    </p>
-                </div>
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/Locations/national-tours/national-tours/kerala.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹28,000 Per Person</p>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Departures: Oct–Dec & Feb–May</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- About End -->
-    
+
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (7N / 8D)</h3>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Arrival in Kochi → Munnar</h5>
+          <p>Meet & greet at Kochi. Drive to Munnar with waterfall and tea garden stops.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-flower3"></i></div>
+        <div class="content">
+          <h5>Day 2 – Munnar Sightseeing</h5>
+          <p>Visit Tea Museum, Mattupetty Dam, Echo Point, and panoramic viewpoints.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
+        <div class="content">
+          <h5>Day 3 – Munnar → Thekkady</h5>
+          <p>Drive to Thekkady. Visit spice plantations and enjoy optional Periyar boat ride.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-house-door-fill"></i></div>
+        <div class="content">
+          <h5>Day 4 – Thekkady → Houseboat (Alleppey)</h5>
+          <p>Board houseboat. Cruise the backwaters with lunch, tea, and dinner onboard.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-water"></i></div>
+        <div class="content">
+          <h5>Day 5 – Alleppey → Kovalam</h5>
+          <p>Disembark after breakfast. Drive to Kovalam beach and enjoy leisure time.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-sunrise"></i></div>
+        <div class="content">
+          <h5>Day 6 – Kovalam & Kanyakumari (Optional)</h5>
+          <p>Explore Kovalam beach or visit Kanyakumari sunset point (optional).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 7 – Kovalam → Kochi</h5>
+          <p>Return to Kochi. Evening shopping or sightseeing as per schedule.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 8 – Departure</h5>
+          <p>Drop at airport/railway station with unforgettable memories of Kerala.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>3/4 star deluxe hotels</li>
+            <li>1 night Kerala houseboat</li>
+            <li>Breakfast & Dinner</li>
+            <li>AC coach/tempo traveller</li>
+            <li>Tour Manager support</li>
+            <li>Sightseeing tickets included</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Flight / Train tickets</li>
+            <li>Lunches not mentioned</li>
+            <li>Personal expenses</li>
+            <li>Optional activities & boating</li>
+            <li>Any emergency or weather-related costs</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ==================== KERALA TOUR PREMIUM SECTION END ===================== -->
+
 
  <!-- ###  footer Start  ###-->
   

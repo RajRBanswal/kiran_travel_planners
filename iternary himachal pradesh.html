@@ -28,92 +28,142 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
  <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+
+ /* PARALLAX HEADER */
+.parallax-banner {
+  background: url('https://images.unsplash.com/photo-1603262110263-fb0112e7cc33') center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {
+  background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-/* Main Section */
-.offer-section {
-    padding: 80px 0;
-    background: #f8f8f8;
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    font-weight: 700;
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+  color: #ff7f4d;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
 }
 
-/* Grid */
-.offer-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff7f4d;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(255,127,77,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
 }
 
-/* Cards */
-.offer-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: 0.3s ease-in-out;
-    transform: translateY(40px);
-    opacity: 0;
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff7f4d;
+  font-weight: bold;
 }
 
-.offer-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
 }
 
-.offer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.offer-content {
-    padding: 20px;
-}
-
-.offer-content h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.offer-content p {
-    font-size: 15px;
-    color: #555;
-}
-
-/* Animation */
 @keyframes fadeUp {
-    from {
-        opacity: 10;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 10;
-        transform: translateY(0);
-    }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-.fade-up {
-    animation: fadeUp 0.15s ease forwards;
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
-
-.delay1 { animation-delay: 0.10s; }
-.delay2 { animation-delay: 0.10s; }
-
- </style>
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+</style>
 
 </head>
 
@@ -184,434 +234,143 @@
   <main class="main">
 
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Itenary for the Himachal Pradesh</h1>
-        <p>Himachal Pradesh, often hailed as the Land of Gods, captivates with its snow-capped Himalayan peaks, lush pine forests, crystal-clear rivers, and enchanting hill stations. Nestled amid majestic mountains, it promises an idyllic escape brimming with adventure, spiritual serenity, and the crisp embrace of alpine meadows. From Shimla's colonial charm to Manali's thrilling valleys and Spiti's stark beauty, Himachal weaves a tapestry of timeless natural splendor and cultural wonders.
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Himachal Pradesh</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
+     <!-- HIMACHAL TOUR PREMIUM SECTION START -->
+<section class="premium-tour-section">
 
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-        <div class="container">
-            <h3 class="text-white">Himachal Pradesh</h3>
-            <ol class="breadcrumb justify-content-center text-white mb-0">
-                <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-            </ol>
-        </div>
-    </div>
-
-    <!-- Header End -->
-    
-
-<section class="offer-section">
-    <div class="container">
-        <h2 class="section-title">We Offerings</h2>
-
-        <div class="offer-grid">
-
-            <!-- Offering 1 -->
-            <div class="offer-card fade-up">
-                <img src="assets/gallery/kasol_1.jpg" alt="">
-                <div class="offer-content">
-                    <h3>Kasol</h3>
-                    <p>Kasol, a charming village nestled in the Parvati Valley of Himachal Pradesh, is famous for its serene landscapes, crystal-clear rivers, and peaceful Himalayan vibes.</p>
-                </div>
-            </div>
-
-            <!-- Offering 2 -->
-            <div class="offer-card fade-up delay1">
-                <img src="assets/gallery/Manali_1.jpg" alt="">
-                <div class="offer-content">
-                    <h3>Manali</h3>
-                    <p>Manali, one of India’s most loved hill stations, sits gracefully in the lap of the Himalayas along the banks of the Beas River. Famous for its snow-capped, pine forests.</p>
-                </div>
-            </div>
-
-            <!-- Offering 3 -->
-            <div class="offer-card fade-up delay2">
-                <img src="assets/gallery/kullu_1.avif" alt="">
-                <div class="offer-content">
-                    <h3>Kullu</h3>
-                    <p>Kullu, often referred to as the “Valley of Gods,” is a beautiful destination nestled along the banks of the Beas River in Himachal Pradesh. Known for its lush green valleys.</p>
-                </div>
-            </div>
-
-             <!-- Offering 4 -->
-            <div class="offer-card fade-up delay2">
-                <img src="assets/gallery/manikarn_1.jpg" alt="">
-                <div class="offer-content">
-                    <h3>Manikarn</h3>
-                    <p>Manikaran, located in the scenic Parvati Valley of Himachal Pradesh, is a sacred pilgrimage destination known for its natural hot springs and spiritual significance.</p>
-                </div>
-            </div>
-
-             <!-- Offering 5 -->
-            <div class="offer-card fade-up delay2">
-                <img src="assets/gallery/atal tunnel" alt="">
-                <div class="offer-content">
-                    <h3>Atal Tunnel</h3>
-                    <p>Atal Tunnel, located in Himachal Pradesh, is one of India’s greatest achievements and a must-visit attraction for travelers heading towards Manali, Lahaul, or Spiti.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/himachal pradesh_1.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h5 class="sub-title pe-3"> Himachal Pradesh</h5>
-                    <h1 class="display-5 mb-4">
-                       “Where snow and silence create their own magic.”
-                    </h1>
-                    <p class="mb-4">
-                       Himachal Pradesh: The Land of Majestic Mountains — a place where nature crafts beauty in every fold of the hills. Surrounded by misty valleys, pine-scented forests, glistening rivers, and snow-kissed peaks, Himachal welcomes you with a calmness that instantly soothes the soul. From the charming colonial streets of Shimla to the serene landscapes of Manali, and from the spiritual aura of Dharamshala to the untouched beauty of Spiti, every corner of Himachal feels like a refreshing breath of mountain magic.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">
-                       “Whispers of the mountains, heart of Himachal.”
-                    </h1>
-                    <p class="mb-4">
-                       Himachal Pradesh, nestled in the western Himalayas, is a land where majestic mountain ranges like the Dhauladhar, Pir Panjal, and the Great Himalayas create a breathtaking panorama. The state's landscape is a mosaic of snow-clad peaks, dense coniferous forests, deep valleys with gurgling streams, and terraced fields that seem to tell stories of ancient times.
-                </div>
-                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="bg-light rounded">
-                        <img src="assets/img/travel/himachal pradesh_2.jpg" class="img-fluid w-100" style="margin-bottom: -7px"
-                            alt="Image" />
-                        <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-    <!-- itenary start -->
-
-  <div class="container p-5 m-5">
-  <div class="st-program-list">
-    <div class="accordion faq st-program style1" id="accordion_day-1-chandigarh-to-manali-voyage">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-1-chandigarh-to-manali-voyage">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-1-chandigarh-to-manali-voyage" aria-expanded="false"
-            aria-controls="day-1-chandigarh-to-manali-voyage">
-           Day 1: Arrive in Shimla and spend the evening exploring Mall Road, the Ridge, Christ Church, and Lakkar Bazaar. </button>
-        </h2>
-        <div id="st-day-1-chandigarh-to-manali-voyage" class="accordion-collapse collapse"
-          aria-labelledby="heading_day-1-chandigarh-to-manali-voyage"
-          data-bs-parent="#accordion_day-1-chandigarh-to-manali-voyage" style="">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/hp tour-1.jpg"
-                  alt="Day 1 Chandigarh To Manali Voyage" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Arrive in Shimla and feel the charm of the bustling Mall Road with its vibrant shops, cozy cafes, and historic colonial architecture.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">After checking into your hotel, take a leisurely stroll along the pedestrian-friendly street, soaking in stunning views of the surrounding hills and indulging in local delicacies.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Enjoy a peaceful evening filled with the city’s lively atmosphere, cultural sights like the Gaiety Theatre, and the warmth of Himachali hospitality.</li>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-2-manali-to-kaza-via-atal-tunnel">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-2-manali-to-kaza-via-atal-tunnel">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-2-manali-to-kaza-via-atal-tunnel" aria-expanded="true"
-            aria-controls="day-2-manali-to-kaza-via-atal-tunnel">
-            Day 2: Take a scenic trip to Kufri for adventure and views, then return to Shimla to visit Jakhu Temple and relax. </button>
-        </h2>
-        <div id="st-day-2-manali-to-kaza-via-atal-tunnel" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-2-manali-to-kaza-via-atal-tunnel"
-          data-bs-parent="#accordion_day-2-manali-to-kaza-via-atal-tunnel">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/hp tour-2.jpg"
-                  alt="Day 2 Manali To Kaza (via Atal Tunnel)" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">In the morning, drive to Kufri and enjoy activities at Kufri Adventure Park. Return to Shimla and visit Jakhu Temple and the Himalayan Nature Park before spending a relaxed evening.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Start your morning with a short drive to Kufri, known for beautiful viewpoints.Try a few fun activities at Kufri Adventure Park or simply enjoy the views.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Return to Shimla around afternoon for a relaxed lunch.
-                        Visit Jakhu Temple on the hilltop and enjoy the peaceful environment.
-                        Spend your evening strolling around central Shimla or resting at your hotel.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-3-exploring-kaza">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-3-exploring-kaza">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-3-exploring-kaza" aria-expanded="true" aria-controls="day-3-exploring-kaza">
-           Day 3: Travel from Shimla to Manali, enjoying sights like Pandoh Dam and Kullu Valley along the way. </button>
-        </h2>
-        <div id="st-day-3-exploring-kaza" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-3-exploring-kaza" data-bs-parent="#accordion_day-3-exploring-kaza">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/hp tour-3.jpg"
-                  alt="Day 3 Exploring Kaza" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Leave for Manali by road and enjoy scenic views of Pandoh Dam and Kullu Valley on the way. You can also try river rafting in Kullu before reaching Manali and exploring Mall Road at night.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Begin your drive early to cover the long yet scenic journey comfortably.Stop briefly at Pandoh Dam to enjoy the beautiful water and mountain views.</li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Drive through the lush Kullu Valley, known for apples and small villages. If interested, try river rafting in Kullu for some adventure. Reach Manali by evening, check in, and walk around Mall Road.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-4-kaza-exploration-continues">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-4-kaza-exploration-continues">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-4-kaza-exploration-continues" aria-expanded="true"
-            aria-controls="day-4-kaza-exploration-continues">
-            Day 4: Explore Manali’s top spots, including Hidimba Temple, Manu Temple, Vashisht Hot Springs, and Old Manali cafés. </button>
-        </h2>
-        <div id="st-day-4-kaza-exploration-continues" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-4-kaza-exploration-continues"
-          data-bs-parent="#accordion_day-4-kaza-exploration-continues">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/hp tour-4.jpg"
-                  alt="Day 4 Kaza Exploration Continues" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <ul>
-                  <li class="sc-97ce8961-0 kLnqLB">
-                    <div class="sc-97ce8961-2 irUKhu">Start your day by visiting Hidimba Temple, Manu Temple, and Vashisht Hot Springs. Spend your afternoon in Old Manali, enjoying cafés, local shops, and Tibetan Monastery.</div>
-                  </li>
-                </ul>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Visit Hidimba Temple, surrounded by tall cedar trees, to start your day. Head to Manu Temple next for a serene and spiritual experience.
-                    </li>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Relax your body in the warm and soothing Vashisht Hot Springs. Spend your afternoon in Old Manali enjoying cafés, shopping, and riverside views.</li>
-                    <li>End your day by exploring nearby markets or visiting the Tibetan Monastery.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-5-cherishing-the-lake-and-driving-to-manali">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-5-cherishing-the-lake-and-driving-to-manali" aria-expanded="true"
-            aria-controls="day-5-cherishing-the-lake-and-driving-to-manali">
-           Day 5: Spend the day in Solang Valley for adventure or drive through the Atal Tunnel to visit the beautiful Sissu area. </button>
-        </h2>
-        <div id="st-day-5-cherishing-the-lake-and-driving-to-manali" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-5-cherishing-the-lake-and-driving-to-manali"
-          data-bs-parent="#accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/hp tour-5.jpg"
-                  alt="Day 5 Cherishing the Lake And Driving To Manali" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Head to Solang Valley for adventure activities like paragliding, ATV rides, and the ropeway. Alternatively, drive through the Atal Tunnel and visit Sissu to enjoy beautiful Lahul Valley landscapes.</li>
-                  </ul>
-                </div>
-                <div class="sc-97ce8961-3 fbZVru">
-                  <ul>
-                    <li class="sc-9c7e9df4-1 eRcRyb">Visit Solang Valley to enjoy activities like paragliding, ropeway rides, or ATV biking. Take in the open valley views and enjoy snow activities during winter.
-                    </li>
-                    <li>Spend some relaxed time taking photos of the surrounding mountains. Visit the beautiful Sissu Waterfall and enjoy the calm atmosphere. Relax at local stalls with chai or Maggi while admiring the scenery.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion faq st-program style1" id="accordion_day-6-bidding-adieu-to-the-mountains">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_day-6-bidding-adieu-to-the-mountains">
-          <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-            data-bs-target="#st-day-6-bidding-adieu-to-the-mountains" aria-expanded="true"
-            aria-controls="day-6-bidding-adieu-to-the-mountains">
-           Day 6: Check out from Manali and begin your return journey, with an optional short visit to Kasol or Manikaran Sahib. </button>
-        </h2>
-        <div id="st-day-6-bidding-adieu-to-the-mountains" class="accordion-collapse collapse "
-          aria-labelledby="heading_day-6-bidding-adieu-to-the-mountains"
-          data-bs-parent="#accordion_day-6-bidding-adieu-to-the-mountains">
-          <div class="accordion-body">
-            <div class="row">
-              <div class="col-lg-4">
-                <img
-                  src="./assets/img/travel/hp tour-6.jpg"
-                  alt="Day 6 Bidding Adieu To The Mountains" class="img-fluid">
-              </div>
-              <div class="col-lg-8">
-                <p class="content-itinerary"></p>
-                <div class="sc-97ce8961-0 kLnqLB">
-                  <ul>
-                    <li class="sc-97ce8961-2 irUKhu">Check out of your hotel and begin your return journey. If you have extra time, you can visit Kasol and Manikaran Sahib before departing.</li>
-                    <li>Stop at Kasol if you want to enjoy a peaceful riverside café atmosphere. Alternatively, visit Manikaran Sahib for a spiritual and calming experience. Continue your drive home feeling refreshed from your Himachal trip.</li>
-                  </ul>
-                </div>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Exciting Himachal Pradesh</h1>
+      <p class="fs-5 opacity-75">4 Nights / 5 Days • Kasol • Manali • Kullu • Manikaran • Atal Tunnel</p>
+      <div class="price-badge">Starting at ₹11,999 / person</div>
     </div>
   </div>
-  </div>
-<!-- itenary end -->
-    
-<!-- SERVICES SECTION -->
-<section id="services" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Our Travel Services</h2>
+
+  <div class="container py-5">
+
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Enjoy snow views, riverside villages, peaceful valleys and adventure fun on this 
+        4 nights / 5 days Himachal group tour from Chandigarh, covering Manali, Kasol, 
+        Kullu, Manikaran and Atal Tunnel with 3-star stays, meals, AC transport and tour manager.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>5 Days / 4 Nights</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹11,999 Per Person</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cloud-sun"></i>
+            <p>Best Season: Apr–Jun & Dec–Feb</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (4N / 5D)</h3>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Chandigarh → Manali</h5>
+          <p>Drive through Bilaspur, Sundernagar & Kullu valley. Evening check-in at Manali hotel.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 2 – Manali Local Sightseeing</h5>
+          <p>Visit Hadimba Temple, Vashisht hot springs, Tibetan Monastery & Mall Road.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-snow2"></i></div>
+        <div class="content">
+          <h5>Day 3 – Atal Tunnel & Solang Valley</h5>
+          <p>Snow adventure day! Visit Solang Valley, Atal Tunnel & Sissu viewpoint.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-tree-fill"></i></div>
+        <div class="content">
+          <h5>Day 4 – Manali → Kullu → Kasol → Manikaran</h5>
+          <p>Visit rafting point, Parvati valley, Kasol cafes & Manikaran hot springs.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 5 – Kasol / Kullu → Chandigarh</h5>
+          <p>Return journey with scenic views of the Beas river & hill towns.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
+
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="p-3 border rounded h-100">
-          <div class="service-icon">🛕</div>
-          <h5>Domestic Tour Packages</h5>
-          <p>Holiday tours across all major Indian destinations with hotel, transport
-             and sightseeing included.</p>
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>3-star hotels (4 nights)</li>
+            <li>Breakfast & Dinner (MAP plan)</li>
+            <li>AC coach / tempo traveller transport</li>
+            <li>Atal Tunnel + Solang Valley</li>
+            <li>Kullu, Kasol & Manikaran visit</li>
+            <li>Entry fees included</li>
+            <li>Tour manager assistance</li>
+          </ul>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="p-3 border rounded h-100">
-          <div class="service-icon">🌍</div>
-          <h5>International Tour Packages</h5>
-          <p>Budget and premium packages for popular foreign destinations with visa
-             and insurance guidance.</p>
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Flight / Train tickets</li>
+            <li>Lunches, snacks, personal expenses</li>
+            <li>Adventure sports fees</li>
+            <li>Pony / Jeep for restricted points</li>
+            <li>Unexpected weather/road issues</li>
+            <li>Extra sightseeing</li>
+          </ul>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="p-3 border rounded h-100">
-          <div class="service-icon">✈️</div>
-          <h5>Flight &amp; Train Booking</h5>
-          <p>Ticket booking for flights and trains with best available routes and timings.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="p-3 border rounded h-100">
-          <div class="service-icon">🏨</div>
-          <h5>Hotel Reservations</h5>
-          <p>Comfortable stays from budget to luxury hotels, resorts and homestays.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="p-3 border rounded h-100">
-          <div class="service-icon">💍</div>
-          <h5>Honeymoon &amp; Family Tours</h5>
-          <p>Special itineraries for couples, families and group departures with
-             customizable sightseeing.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="p-3 border rounded h-100">
-          <div class="service-icon">🏢</div>
-          <h5>Corporate &amp; Custom Tours</h5>
-          <p>Tailor‑made trips for companies, school picnics and special interest groups.</p>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
 
-  <!-- ###  footer Start  ###-->
+  </div>
+
+</section>
+<!-- HIMACHAL TOUR PREMIUM SECTION END -->
+
+    
+
+    
+  <!--   footer Start -->
 
   <footer id="footer" class="footer position-relative dark-background">
 

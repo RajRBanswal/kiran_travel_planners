@@ -30,7 +30,141 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
-    
+    /* PARALLAX HEADER */
+.parallax-banner-goa {
+  background: url(assets/img/travel/goa\ tour-4.jpg) center/cover fixed;
+  height: 65vh;
+  position: relative;
+}
+.parallax-banner-goa::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+.gradient-text {
+  background: linear-gradient(45deg, #ff7b47, #ffb36c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.price-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ICON BOXES */
+.overview-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.overview-box i {
+  font-size: 35px;
+  color: #ff7f4d;
+  margin-bottom: 10px;
+}
+.overview-box:hover {
+  transform: translateY(-5px);
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 30px 0;
+}
+.timeline-item {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: #ff7f4d;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-right: 20px;
+  box-shadow: 0 8px 20px rgba(255,127,77,.4);
+}
+.timeline-item .content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  transition: 0.3s;
+}
+.timeline-item:hover .content {
+  transform: translateY(-6px);
+}
+
+/* CUSTOM LIST */
+.custom-list li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+}
+.custom-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ff7f4d;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.fade-in-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-left {
+  animation: fadeLeft 1s ease forwards;
+  opacity: 0;
+}
+.fade-in-right {
+  animation: fadeRight 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
   </style>
 </head>
 
@@ -100,407 +234,146 @@
 
   <main class="main">
 
+    
+    <!-- ==================== GOA TOUR PREMIUM SECTION START ===================== -->
+<section class="premium-tour-section">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade"
-      style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Goa Tours</h1>
-        <p>Goa offers a perfect mix of breathtaking coastlines, peaceful villages, and colonial architecture. Its
-          lifestyle reflects a fusion of Indian warmth with Portuguese influence, creating an atmosphere unlike anywhere
-          else in India.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Goa</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- heading start -->
-    <!-- Header Start -->
-    <div class="container-fluid bg-breadcrumb">
-      <div class="container">
-        <h3 class="text-white">Goa</h3>
-        <ol class="breadcrumb justify-content-center text-white mb-0">
-          <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-        </ol>
-      </div>
+  <!-- PARALLAX HEADER -->
+  <div class="parallax-banner-goa d-flex align-items-center justify-content-center">
+    <div class="text-center text-white banner-content fade-in-up">
+      <h1 class="display-4 fw-bold gradient-text">Vibrant Goa Escapade</h1>
+      <p class="fs-5 opacity-75">5 Nights / 6 Days • Calangute • Baga • Anjuna • Dudhsagar Falls • Panjim</p>
+      <div class="price-badge">Starting at ₹30,000 / person</div>
     </div>
+  </div>
 
-    <!-- Header End -->
-    <!-- heading end -->
+  <div class="container py-5">
 
-    <!-- About Start -->
-    <div class="container-fluid py-3">
-      <div class="container py-3">
-        <div class="row g-5">
-          <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="bg-light rounded">
-              <img src="assets/Locations/national-tours/Goa-place1.png" class="img-fluid w-100"
-                style="height: 420px; object-fit: cover; margin-bottom: -7px;" alt="Image" />
+    <!-- OVERVIEW -->
+    <div class="glass-card fade-in-up mb-5">
+      <h3 class="fw-bold mb-3 gradient-text">Tour Overview</h3>
+      <p>
+        Discover Goa's golden beaches, vibrant nightlife, historic churches, scenic waterfalls, 
+        and spice plantations. This 5 Nights / 6 Days Goa package covers Calangute, Baga, Anjuna, 
+        Dudhsagar Falls, Panjim, and more. Enjoy deluxe hotels, meals, private transport, 
+        sightseeing, and unforgettable memories in India’s tropical paradise.
+      </p>
 
-            </div>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-calendar2-week"></i>
+            <p>6 Days / 5 Nights</p>
           </div>
-          <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-            <h2 class="sub-title pe-3"> Goa </h3>
-              <h5 class="sub-title pe-3"> - Calangute Beach</h5>
-              <h3 style="font-size: 30px; font-weight: 600;" class="mb-3">
-                “After monsoon to enjoy the water sports”
-              </h3>
-
-              <p class="mb-4">
-                Calangute Beach, often called the Queen of Beaches, is the most lively, vibrant, and iconic destination
-                in North Goa. Known for its long stretch of golden sand, swaying palm trees, and exciting water sports,
-                Calangute attracts travelers from all over the world. Whether you're seeking adventure, relaxation, or a
-                fun-filled holiday, this beach offers something for everyone.
-              </p>
-              <p>From sunrise to sunset, Calangute stays energetic—mornings are peaceful with calm waves and refreshing
-                sea breeze, while afternoons are perfect for water activities like parasailing, jet skiing, banana
-                rides, and more. As the sun sets, the beach transforms into a colorful mix of music, beach shacks,
-                shopping stalls, and street food.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-cash-coin"></i>
+            <p>From ₹30,000 Per Person</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="overview-box">
+            <i class="bi bi-clock-history"></i>
+            <p>Departures: Oct–Mar</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid py-5">
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-            <h3 class="sub-title pe-3"> - Dudhsagar Falls</h3>
-            <h4 style="font-size: 22px; font-weight: 600;" class="mb-3">
-              “Full Day Jeep Safari Tour of Famous Dudhsagar Falls”
-            </h4>
-            <p class="mb-4">
-              Dudhsagar Falls, meaning “Sea of Milk”, is one of India’s tallest and most breathtaking waterfalls,
-              located on the Goa–Karnataka border inside the lush Bhagwan Mahavir Wildlife Sanctuary. Cascading from a
-              height of over 310 meters, the waterfall appears like a river of white milk flowing down the mountains,
-              creating a mesmerizing sight that leaves every visitor spellbound.
-            </p>
-            <p>Surrounded by dense forests, wildlife, and scenic trekking trails, Dudhsagar offers a thrilling
-              experience for nature lovers and adventure seekers. The journey itself is unforgettable — from jeep
-              safaris through the jungle to crossing streams and rocky terrains. During the monsoon and post-monsoon
-              months, the falls reach their full glory, with powerful streams and mist filling the air.</p>
-          </div>
-          <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="bg-light rounded">
-              <img src="assets/Locations/national-tours/Goa-place2.jpg" class="img-fluid w-100"
-                style="height: 350px; object-fit: cover; margin-bottom: -7px;" alt="Image" />
-              <img src="" class="img-fluid w-100 border-bottom border-5 border-primary" style="
-                  border-top-right-radius: 300px;
-                  border-top-left-radius: 300px;
-                " alt="" />
-            </div>
-          </div>
+
+    <!-- ITINERARY -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mb-4">🗓 Itinerary (5N / 6D)</h3>
+
+    <div class="timeline">
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-geo-alt-fill"></i></div>
+        <div class="content">
+          <h5>Day 1 – Arrival in Goa</h5>
+          <p>Airport pickup. Check-in at hotel. Evening leisure at Calangute Beach.</p>
         </div>
       </div>
-    </div>
-    <div class="container-fluid py-3">
-      <div class="container py-3">
-        <div class="row g-5">
-          <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-            <div class="bg-light rounded">
-              <img src="assets/Locations/national-tours/fort-aguada-goa.jpg" class="img-fluid w-100"
-                style="height: 420px; object-fit: cover; margin-bottom: -7px;" alt="Image" />
 
-            </div>
-          </div>
-          <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-            <h2 class="sub-title pe-3"> -&nbsp;Fort Aguada </h3>
-
-              <h3 style="font-size: 25px; font-weight: 600;" class="mb-3">
-                “Heritage, ocean views, and stories of the past.”
-              </h3>
-
-              <p class="mb-4">
-                Fort Aguada is one of Goa’s most iconic and well-preserved Portuguese forts, standing majestically on
-                the Sinquerim plateau overlooking the vast Arabian Sea. Built in 1612, the fort served as a powerful
-                defense base to protect Goa from enemy invasions and was a crucial reference point for ships arriving
-                from Europe. Its name, Aguada, comes from the Portuguese word for “water,” as the fort once supplied
-                fresh water to passing vessels through its massive storage reservoirs.
-              </p>
-              <p>The fort complex includes a historic lighthouse, panoramic cliff-top views, and ancient walls that echo
-                stories of Goa’s colonial past. Visitors love exploring its open courtyards, sturdy bastions, and
-                breathtaking viewpoints that offer a sweeping view of the ocean and surrounding coastline.</p>
-          </div>
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-beach"></i></div>
+        <div class="content">
+          <h5>Day 2 – North Goa Sightseeing</h5>
+          <p>Visit Baga Beach, Anjuna Flea Market, Chapora Fort & enjoy water sports.</p>
         </div>
       </div>
-    </div>
-    <!-- About End -->
 
-
-
-
-
-    <!-- itenary start -->
-
-    <div class="container py-4 mt-0">
-
-      <div class="st-program-list">
-        <div class="accordion faq st-program style1" id="accordion_day-1-chandigarh-to-manali-voyage">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading_day-1-chandigarh-to-manali-voyage">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#st-day-1-chandigarh-to-manali-voyage" aria-expanded="false"
-                aria-controls="day-1-chandigarh-to-manali-voyage">
-                Day 1: Arrival + North Goa Beaches </button>
-            </h2>
-            <div id="st-day-1-chandigarh-to-manali-voyage" class="accordion-collapse collapse"
-              aria-labelledby="heading_day-1-chandigarh-to-manali-voyage"
-              data-bs-parent="#accordion_day-1-chandigarh-to-manali-voyage" style="">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="./assets/img/travel/goa tour-1.jpg" alt="Day 1 Chandigarh To Manali Voyage"
-                      class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="content-itinerary"></p>
-                    <div class="sc-97ce8961-0 kLnqLB">
-                      <ul>
-                        <li class="sc-97ce8961-2 irUKhu">Begin your Goa journey by checking into your hotel and relaxing
-                          after your arrival. Start exploring North Goa with visits to Calangute and Baga, two of the
-                          most popular beaches known for their lively atmosphere.</li>
-                      </ul>
-                    </div>
-                    <div class="sc-97ce8961-3 fbZVru">
-                      <ul>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Enjoy a peaceful sunset at Baga Beach and spend your evening
-                          strolling through Tito’s Lane, experiencing Goa’s vibrant nightlife before ending the day with
-                          a delicious dinner at a beach shack.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Goa with visits to Calangute and Baga, two of the most popular
-                          beaches known for their lively atmosphere.</li>
-                      </ul>
-                    </div>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion faq st-program style1" id="accordion_day-2-manali-to-kaza-via-atal-tunnel">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading_day-2-manali-to-kaza-via-atal-tunnel">
-              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                data-bs-target="#st-day-2-manali-to-kaza-via-atal-tunnel" aria-expanded="true"
-                aria-controls="day-2-manali-to-kaza-via-atal-tunnel">
-                Day 2: Dedicate the day to discovering North Goa’s major attractions. </button>
-            </h2>
-            <div id="st-day-2-manali-to-kaza-via-atal-tunnel" class="accordion-collapse collapse "
-              aria-labelledby="heading_day-2-manali-to-kaza-via-atal-tunnel"
-              data-bs-parent="#accordion_day-2-manali-to-kaza-via-atal-tunnel">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="./assets/img/travel/goa tour-2.jpg" alt="Day 2 Manali To Kaza (via Atal Tunnel)"
-                      class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="content-itinerary"></p>
-                    <ul>
-                      <li class="sc-97ce8961-0 kLnqLB">
-                        <div class="sc-97ce8961-2 irUKhu">Visit the historic Fort Aguada and its lighthouse, then head
-                          to Candolim Beach for some relaxing beach time.</div>
-                      </li>
-                    </ul>
-                    <div class="sc-97ce8961-3 fbZVru">
-                      <ul>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Explore the famous Anjuna Beach and its vibrant Flea Market. In
-                          the evening, enjoy the breathtaking views from Vagator Beach and Chapora Fort, known for its
-                          iconic sunset point.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Enjoy a peaceful sunset at Baga Beach and spend your evening
-                          strolling through Tito’s Lane, experiencing Goa’s vibrant nightlife before ending the day with
-                          a delicious dinner at a beach shack.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">To add the cherry on top of the cake, you will be driving
-                          through
-                          one of the newest marvels of the country, the Atal Tunnel.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">enjoy the breathtaking views from Vagator Beach and Chapora
-                          Fort, known for its iconic sunset point.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Dinner and overnight stay in the hotel/camps.</li>
-                      </ul>
-                    </div>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion faq st-program style1" id="accordion_day-3-exploring-kaza">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading_day-3-exploring-kaza">
-              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                data-bs-target="#st-day-3-exploring-kaza" aria-expanded="true" aria-controls="day-3-exploring-kaza">
-                Day 3: This day is all about adventure and excitement.</button>
-            </h2>
-            <div id="st-day-3-exploring-kaza" class="accordion-collapse collapse "
-              aria-labelledby="heading_day-3-exploring-kaza" data-bs-parent="#accordion_day-3-exploring-kaza">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="./assets/img/travel/goa tour-3.jpg" alt="Day 3 Exploring Kaza" class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="content-itinerary"></p>
-                    <ul>
-                      <li class="sc-97ce8961-0 kLnqLB">
-                        <div class="sc-97ce8961-2 irUKhu">Arise in the midst of the majestic mountains and get ready for
-                          exploring the best of what Kaza has to offer.</div>
-                      </li>
-                    </ul>
-                    <div class="sc-97ce8961-3 fbZVru">
-                      <ul>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Engage in popular water sports such as parasailing, jet skiing,
-                          banana boat rides, and bumper rides</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">You can also choose to experience scuba diving or snorkeling
-                          for underwater exploration. Spend the rest of the day relaxing at Sinquerim Beach and enjoying
-                          the thrill of North Goa’s adventure zone.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Dedicate the day to discovering North Goa’s major attractions.
-                          Visit the historic Fort Aguada and its lighthouse, then head to Candolim Beach for some
-                          relaxing beach time. Explore the famous Anjuna Beach and its vibrant Flea Market. In the
-                          evening, enjoy the breathtaking views from Vagator Beach and Chapora Fort, known for its
-                          iconic sunset point.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">water sports such as parasailing, jet skiing, banana boat
-                          rides, and bumper rides. You can also choose to experience scuba diving or snorkeling for
-                          underwater exploration.</li>
-                      </ul>
-                    </div>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion faq st-program style1" id="accordion_day-4-kaza-exploration-continues">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading_day-4-kaza-exploration-continues">
-              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                data-bs-target="#st-day-4-kaza-exploration-continues" aria-expanded="true"
-                aria-controls="day-4-kaza-exploration-continues">
-                Day 4: Explore the rich heritage of Goa with a visit to Old Goa.</button>
-            </h2>
-            <div id="st-day-4-kaza-exploration-continues" class="accordion-collapse collapse "
-              aria-labelledby="heading_day-4-kaza-exploration-continues"
-              data-bs-parent="#accordion_day-4-kaza-exploration-continues">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="./assets/img/travel/goa tour-4.jpg" alt="Day 4 Kaza Exploration Continues"
-                      class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="content-itinerary"></p>
-                    <ul>
-                      <li class="sc-97ce8961-0 kLnqLB">
-                        <div class="sc-97ce8961-2 irUKhu">Discover the famous Basilica of Bom Jesus, Se Cathedral, and
-                          the ancient St.</div>
-                      </li>
-                    </ul>
-                    <div class="sc-97ce8961-3 fbZVru">
-                      <ul>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Augustine Ruins. Walk through the colourful Portuguese-style
-                          lanes of Fontainhas, followed by a visit to Dona Paula Viewpoint and Miramar Beach.
-                        </li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">In the evening, enjoy a scenic Panjim River Cruise with Goan
-                          music and cultural performances.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Basilica of Bom Jesus, Se Cathedral, and the ancient St.
-                          Augustine Ruins. Walk through the colourful Portuguese-style lanes of Fontainhas, followed by
-                          a visit to Dona Paula Viewpoint and Miramar Beach</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">Spend the rest of the day relaxing at Sinquerim Beach and
-                          enjoying the thrill of North Goa’s adventure zone.</li>
-                        <li class="sc-9c7e9df4-1 eRcRyb">After the drive, arrive at the main attraction.
-                          Upon arrival at the lake check-in your camps for dinner and overnight stay.</li>
-                      </ul>
-                    </div>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion faq st-program style1" id="accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading_day-5-cherishing-the-lake-and-driving-to-manali">
-              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                data-bs-target="#st-day-5-cherishing-the-lake-and-driving-to-manali" aria-expanded="true"
-                aria-controls="day-5-cherishing-the-lake-and-driving-to-manali">
-                Day 5: End your Goa trip with a refreshing excursion to Dudhsagar Waterfalls.</button>
-            </h2>
-            <div id="st-day-5-cherishing-the-lake-and-driving-to-manali" class="accordion-collapse collapse "
-              aria-labelledby="heading_day-5-cherishing-the-lake-and-driving-to-manali"
-              data-bs-parent="#accordion_day-5-cherishing-the-lake-and-driving-to-manali">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="./assets/img/travel/goa tour-5.jpg" alt="Day 5 Cherishing the Lake And Driving To Manali"
-                      class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="content-itinerary"></p>
-                    <div class="sc-97ce8961-0 kLnqLB">
-                      <ul>
-                        <li class="sc-97ce8961-2 irUKhu">Discover the famous Basilica of Bom Jesus, Se Cathedral, and
-                          the ancient St. Augustine Ruins.</li>
-                      </ul>
-                    </div>
-                    <div class="sc-97ce8961-3 fbZVru">
-                      <ul>
-                        <li class="sc-9c7e9df4-1 eRcRyb">In the evening, enjoy a scenic Panjim River Cruise with Goan
-                          music and cultural performances.Walk through the colourful Portuguese-style lanes of
-                          Fontainhas, followed by a visit to Dona Paula Viewpoint and Miramar Beach.
-                        </li>
-                      </ul>
-                    </div>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion faq st-program style1" id="accordion_day-6-bidding-adieu-to-the-mountains">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading_day-6-bidding-adieu-to-the-mountains">
-              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                data-bs-target="#st-day-6-bidding-adieu-to-the-mountains" aria-expanded="true"
-                aria-controls="day-6-bidding-adieu-to-the-mountains">
-                Day 6: Head towards South Goa for a peaceful and scenic experience. </button>
-            </h2>
-            <div id="st-day-6-bidding-adieu-to-the-mountains" class="accordion-collapse collapse "
-              aria-labelledby="heading_day-6-bidding-adieu-to-the-mountains"
-              data-bs-parent="#accordion_day-6-bidding-adieu-to-the-mountains">
-              <div class="accordion-body">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img src="./assets/img/travel/goa tour-6.jpg" alt="Day 6 Bidding Adieu To The Mountains"
-                      class="img-fluid">
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="content-itinerary"></p>
-                    <div class="sc-97ce8961-0 kLnqLB">
-                      <ul>
-                        <li class="sc-97ce8961-2 irUKhu">Visit the beautiful Colva and Benaulim beaches, followed by a
-                          trip to the serene Shree Manguesh Temple. Spend your afternoon at the stunning Palolem Beach
-                          and, if you wish, enjoy the unique silent disco at night. Capture beautiful moments at
-                          Butterfly Beach viewpoint, known for its picturesque surroundings.</li>
-                      </ul>
-                    </div>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-cup-hot"></i></div>
+        <div class="content">
+          <h5>Day 3 – South Goa Exploration</h5>
+          <p>Relax at Colva & Palolem beaches. Optional spice plantation tour.</p>
         </div>
       </div>
-    </div>
-    <!-- itenary end -->
 
-  
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-water"></i></div>
+        <div class="content">
+          <h5>Day 4 – Dudhsagar Falls Excursion</h5>
+          <p>Visit majestic Dudhsagar Falls and nearby wildlife sanctuary. Evening leisure.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-left">
+        <div class="timeline-icon"><i class="bi bi-building"></i></div>
+        <div class="content">
+          <h5>Day 5 – Panjim & Churches</h5>
+          <p>Explore Panjim city, Basilica of Bom Jesus, Se Cathedral & Fontainhas heritage area.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-right">
+        <div class="timeline-icon"><i class="bi bi-airplane"></i></div>
+        <div class="content">
+          <h5>Day 6 – Departure</h5>
+          <p>Drop at Goa airport/railway station with unforgettable memories.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INCLUSIONS & EXCLUSIONS -->
+    <h3 class="text-center fw-bold gradient-text fade-in-up mt-5 mb-4">✔ Inclusions & ❌ Exclusions</h3>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-left">
+          <h4 class="fw-bold">✔ Inclusions</h4>
+          <ul class="custom-list">
+            <li>3/4 star deluxe hotels</li>
+            <li>Breakfast & Dinner</li>
+            <li>Private AC coach/tempo traveller</li>
+            <li>Tour Manager support</li>
+            <li>Sightseeing tickets included</li>
+            <li>Pickup & drop from airport/railway station</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="glass-card fade-in-right">
+          <h4 class="fw-bold">❌ Exclusions</h4>
+          <ul class="custom-list">
+            <li>Flight / Train tickets</li>
+            <li>Lunches not mentioned</li>
+            <li>Personal expenses & tips</li>
+            <li>Optional activities & water sports</li>
+            <li>Anything not mentioned in inclusions</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ==================== GOA TOUR PREMIUM SECTION END ===================== -->
 
     <!-- ###  footer Start  ###-->
 
