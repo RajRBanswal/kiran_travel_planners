@@ -1,0 +1,27 @@
+.place-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.place-card:hover {
+    transform: scale(1.03);
+}
+
+.card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-title-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
