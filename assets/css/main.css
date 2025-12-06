@@ -941,8 +941,8 @@ section,
 }
 
 .travel-hero .booking-form-wrapper .booking-form .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color:#006ce4;
+  border-color:#006ce4;
   color: var(--contrast-color);
   padding: 12px 20px;
   font-weight: 600;
